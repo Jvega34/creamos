@@ -5,9 +5,6 @@ description: >-
 email: johan.rvega34@gmail.com
 baseurl: "/creamos"
 url: "https://Jvega34.github.io"
-
-# Identidad Visual (Manual 2025, pág. 16)
-# Sin la barra inicial si usas baseurl
 logo: assets/img/fondoClaro.png
 # Usamos el tema estándar para mayor estabilidad
 theme: minima
@@ -16,10 +13,6 @@ theme: minima
 header_pages:
   - index.md
   - quienes-somos.md
-  - analisis-numerico.md
-  - vision-politica.md
-  - datos-abiertos.md
-
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
