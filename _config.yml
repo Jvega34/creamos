@@ -34,3 +34,7 @@ lines_of_action:
   - Territorio y Vida Digna
   - Educación, Ciencia y Tecnología
   - Economía Popular
+logo: /assets/img/nombre-de-tu-archivo.png # Cambia esto por el nombre exacto de tu logo
+header_pages:
+  - index.md
+  - about.md
