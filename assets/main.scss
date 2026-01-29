@@ -1,32 +1,22 @@
 ---
 ---
+// 1. Definir variables institucionales PRIMERO
+$brand-color: #63055d; // Imperial Purple
+$accent-color: #ff3564; // Calypso Coral
+$site-title-color: #63055d;
+
+// 2. Importar el tema DESPUÉS
 @import "minima";
 
-// Aplicación de Paleta Cromática [cite: 123]
-$brand-color: #63055d; // Imperial Purple [cite: 125]
-$accent-color: #ff3564; // Calypso Coral [cite: 129]
-$background-color: #ffffff; // Blanco para legibilidad técnica [cite: 135]
-
+// 3. Estilos personalizados adicionales
 body {
-  font-family: 'Poppins', sans-serif !important; // Tipografía institucional [cite: 186]
-  color: #63055d; 
-}
-
-h1, h2, h3 {
-  color: #63055d; // Títulos en Púrpura Imperial [cite: 125]
-  font-weight: 700;
+  font-family: 'Poppins', sans-serif !important;
 }
 
 .site-header {
-  border-top: 5px solid #ffcc29; // Línea superior en Dandelion [cite: 126]
-  background-color: #ffffff;
+  border-top: 5px solid #ffcc29; // Línea superior en Dandelion
 }
 
-.site-title {
-  color: #63055d !important;
-}
-
-a {
-  color: #ff3564; // Enlaces en Calypso Coral [cite: 128]
-  &:visited { color: #c32353; } // Bright Rose [cite: 133]
+.site-title, .site-title:visited {
+  color: $brand-color !important;
 }
