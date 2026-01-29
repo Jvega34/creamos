@@ -7,8 +7,8 @@ baseurl: "/creamos"
 url: "https://Jvega34.github.io"
 
 # Identidad Visual (Manual 2025, pág. 16)
-logo: /assets/img/fondoClaro.png 
-
+# Sin la barra inicial si usas baseurl
+logo: assets/img/fondoClaro.png
 # Usamos el tema estándar para mayor estabilidad
 theme: minima
 
