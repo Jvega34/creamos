@@ -1,17 +1,18 @@
-# Identidad del Sitio
 title: Creamos
 description: >-
-  Plataforma de difusión política y análisis técnico. 
-  Elevando el debate en Colombia mediante el rigor numérico y la visión popular.
+  Difusión de ideas políticas y análisis técnico. 
+  Transformando datos en visión país desde el rigor numérico.
 email: johan.rvega34@gmail.com
 baseurl: "/creamos"
 url: "https://Jvega34.github.io"
 
-# Logo Institucional (Ruta corregida)
-# El manual exige máxima legibilidad y contraste [cite: 147]
-logo: /assets/img/fondoClaro.png 
+# Identidad Visual (Manual pág. 16)
+logo: /assets/img/fondoClaro.png
 
-# Menú de Navegación (Limpio y en orden)
+# Forzar el tema correcto
+remote_theme: jekyll/minima
+
+# Menú de Navegación
 header_pages:
   - index.md
   - quienes-somos.md
@@ -19,8 +20,7 @@ header_pages:
   - vision-politica.md
   - datos-abiertos.md
 
-# Títulos del Menú
-titles:
-  quienes-somos: "Quiénes Somos"
-  analisis-numerico: "Análisis de Datos"
-  vision-politica: "Visión Política"
+# Plugins necesarios
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
