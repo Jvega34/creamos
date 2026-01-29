@@ -1,0 +1,13 @@
+title: Creamos
+email: contacto@creamos.org # O el que prefieras
+description: >-
+  Difusión de ideas políticas y análisis numéricos técnicos. 
+  Transformando datos en visión país.
+baseurl: "/creamos" # Importante para que los links funcionen en GitHub Pages
+url: "https://Jvega34.github.io"
+
+# Configuración de Jekyll
+theme: minima # Empezaremos con el básico para que sea rápido, luego lo enchulamos
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
