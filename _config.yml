@@ -34,7 +34,7 @@ lines_of_action:
   - Territorio y Vida Digna
   - Educación, Ciencia y Tecnología
   - Economía Popular
-logo: /assets/img//assets/img/CREAMOS-LOGO-COLOR-FONDO%20CLARO.png
+logo: assets/img/fondoClaro.png
 header_pages:
   - index.md
   - about.md
