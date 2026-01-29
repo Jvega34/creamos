@@ -38,3 +38,17 @@ logo: /assets/img//assets/img/CREAMOS-LOGO-COLOR-FONDO%20CLARO.png
 header_pages:
   - index.md
   - about.md
+  # Configuración del Menú de Navegación
+header_pages:
+  - index.md
+  - quienes-somos.md
+  - analisis-numerico.md
+  - vision-politica.md
+  - datos-abiertos.md
+
+# Títulos amigables para el menú
+titles:
+  quienes-somos: "Quiénes Somos"
+  analisis-numerico: "Análisis de Datos"
+  vision-politica: "Visión Política"
+  memoria: "Memoria"
