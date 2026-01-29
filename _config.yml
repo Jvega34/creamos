@@ -6,11 +6,11 @@ email: johan.rvega34@gmail.com
 baseurl: "/creamos"
 url: "https://Jvega34.github.io"
 
-# Identidad Visual (Manual pág. 16)
-logo: /assets/img/fondoClaro.png
+# Identidad Visual (Manual 2025, pág. 16)
+logo: /assets/img/fondoClaro.png 
 
-# Forzar el tema correcto
-remote_theme: jekyll/minima
+# Usamos el tema estándar para mayor estabilidad
+theme: minima
 
 # Menú de Navegación
 header_pages:
@@ -20,7 +20,6 @@ header_pages:
   - vision-politica.md
   - datos-abiertos.md
 
-# Plugins necesarios
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
