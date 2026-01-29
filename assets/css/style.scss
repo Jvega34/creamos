@@ -1,0 +1,32 @@
+---
+---
+@import "minima";
+
+// Aplicación de Paleta Cromática [cite: 123]
+$brand-color: #63055d; // Imperial Purple [cite: 125]
+$accent-color: #ff3564; // Calypso Coral [cite: 129]
+$background-color: #ffffff; // Blanco para legibilidad técnica [cite: 135]
+
+body {
+  font-family: 'Poppins', sans-serif !important; // Tipografía institucional [cite: 186]
+  color: #63055d; 
+}
+
+h1, h2, h3 {
+  color: #63055d; // Títulos en Púrpura Imperial [cite: 125]
+  font-weight: 700;
+}
+
+.site-header {
+  border-top: 5px solid #ffcc29; // Línea superior en Dandelion [cite: 126]
+  background-color: #ffffff;
+}
+
+.site-title {
+  color: #63055d !important;
+}
+
+a {
+  color: #ff3564; // Enlaces en Calypso Coral [cite: 128]
+  &:visited { color: #c32353; } // Bright Rose [cite: 133]
+}
