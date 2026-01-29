@@ -1,13 +1,36 @@
+# Identidad del Sitio
 title: Creamos
-email: contacto@creamos.org # O el que prefieras
 description: >-
-  Difusión de ideas políticas y análisis numéricos técnicos. 
-  Transformando datos en visión país.
-baseurl: "/creamos" # Importante para que los links funcionen en GitHub Pages
+  Plataforma de difusión política y análisis técnico. 
+  Elevando el debate en Colombia mediante el rigor numérico y la visión popular.
+email: johan.rvega34@gmail.com
+baseurl: "/creamos" 
 url: "https://Jvega34.github.io"
 
+# Colores Institucionales (Extraídos del Manual)
+# Imperial Purple: #63055d | Dandelion: #ffcc29 | Calypso Coral: #ff3564
+brand_colors:
+  primary: "#63055d"
+  secondary: "#ffcc29"
+  accent: "#ff3564"
+  background_light: "#fff5b2"
+
+# Tipografía (Manual de Identidad, pág. 20)
+# Usaremos Poppins por su versatilidad para textos técnicos y numéricos.
+fonts:
+  main: "Poppins, sans-serif"
+  secondary: "Sofia Sans, sans-serif"
+
 # Configuración de Jekyll
-theme: minima # Empezaremos con el básico para que sea rápido, luego lo enchulamos
+theme: minima
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+
+# Datos de la Organización (Manual pág. 4)
+lines_of_action:
+  - Justicia de Género e Interseccionalidad
+  - Democracia y Derechos Humanos
+  - Territorio y Vida Digna
+  - Educación, Ciencia y Tecnología
+  - Economía Popular
