@@ -1,3 +1,4 @@
+# Identidad del Sitio
 title: Creamos
 description: >-
   Plataforma de difusión política y análisis técnico. 
@@ -6,25 +7,20 @@ email: johan.rvega34@gmail.com
 baseurl: "/creamos"
 url: "https://Jvega34.github.io"
 
-# Identidad Visual
-logo: /assets/img/fondoClaro.png
+# Logo Institucional (Ruta corregida)
+# El manual exige máxima legibilidad y contraste [cite: 147]
+logo: /assets/img/fondoClaro.png 
 
-# Colores (Manual de Identidad pág. 16)
-brand_colors:
-  primary: "#63055d" # Imperial Purple
-  secondary: "#ffcc29" # Dandelion
-  accent: "#ff3564" # Calypso Coral
-
-# Configuración de Jekyll
-theme: minima
-plugins:
-  - jekyll-feed
-  - jekyll-seo-tag
-
-# Menú de Navegación (Consolidado)
+# Menú de Navegación (Limpio y en orden)
 header_pages:
   - index.md
   - quienes-somos.md
   - analisis-numerico.md
   - vision-politica.md
   - datos-abiertos.md
+
+# Títulos del Menú
+titles:
+  quienes-somos: "Quiénes Somos"
+  analisis-numerico: "Análisis de Datos"
+  vision-politica: "Visión Política"
