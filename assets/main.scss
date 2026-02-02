@@ -20,3 +20,26 @@ body {
 .site-title, .site-title:visited {
   color: $brand-color !important;
 }
+// Inyección técnica del logo en el encabezado
+.site-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px; // Espacio entre el logo y el texto
+  
+  &::before {
+    content: "";
+    width: 45px; // Ajusta el tamaño según el Manual
+    height: 45px;
+    background: url("{{ '/assets/img/fondoClaro.png' | relative_url }}") no-repeat center;
+    background-size: contain;
+    display: inline-block;
+  }
+}
+
+// Ajuste para dispositivos móviles
+@media screen and (max-width: 600px) {
+  .site-title::before {
+    width: 35px;
+    height: 35px;
+  }
+}
