@@ -16,3 +16,6 @@ steps:
   # 3. Desplegar a Firebase Hosting
   - name: 'gcr.io/cloud-builders/firebase'
     args: ['deploy', '--only', 'hosting', '--project', '$PROJECT_ID']
+
+  options:
+    logging: CLOUD_LOGGING_ONLY
