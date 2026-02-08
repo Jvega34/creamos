@@ -1,0 +1,18 @@
+steps:
+  # 1. Instalar Bundler y las dependencias (Jekyll)
+  - name: 'ruby:3.2'
+    entrypoint: bash
+    args:
+      - -c
+      - |
+        gem install bundler
+        bundle install
+
+  # 2. Compilar el sitio (Genera la carpeta _site)
+  - name: 'ruby:3.2'
+    entrypoint: bundle
+    args: ['exec', 'jekyll', 'build']
+
+  # 3. Desplegar a Firebase Hosting
+  - name: 'gcr.io/cloud-builders/firebase'
+    args: ['deploy', '--only', 'hosting', '--project', '$PROJECT_ID']
