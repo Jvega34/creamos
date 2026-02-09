@@ -19,8 +19,30 @@
     <div class="site-container">
         <header class="main-header">
             <div class="date-bar">
-                {{ "now" | date: "%A, %e de %B de %Y" | replace: "Monday", "Lunes" | replace: "Tuesday", "Martes" | replace: "Wednesday", "Miércoles" | replace: "Thursday", "Jueves" | replace: "Friday", "Viernes" | replace: "Saturday", "Sábado" | replace: "Sunday", "Domingo" }}
-            </div>
+  {% assign date_format = "now" | date: "%A, %e de %B de %Y" %}
+  
+  {{ date_format | 
+    replace: "Monday", "Lunes" | 
+    replace: "Tuesday", "Martes" | 
+    replace: "Wednesday", "Miércoles" | 
+    replace: "Thursday", "Jueves" | 
+    replace: "Friday", "Viernes" | 
+    replace: "Saturday", "Sábado" | 
+    replace: "Sunday", "Domingo" | 
+    replace: "January", "Enero" | 
+    replace: "February", "Febrero" | 
+    replace: "March", "Marzo" | 
+    replace: "April", "Abril" | 
+    replace: "May", "Mayo" | 
+    replace: "June", "Junio" | 
+    replace: "July", "Julio" | 
+    replace: "August", "Agosto" | 
+    replace: "September", "Septiembre" | 
+    replace: "October", "Octubre" | 
+    replace: "November", "Noviembre" | 
+    replace: "December", "Diciembre" 
+  }}
+</div>
             
             <a href="/" class="logo-link">
                 <img src="/assets/img/fondoClaro.png" alt="Logo Creamos" class="header-logo">
