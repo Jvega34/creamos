@@ -29,7 +29,7 @@ body {
   }
 }
 
-// 3. CABECERA (Ajustada para cercanía)
+// 3. CABECERA
 .main-header {
   text-align: center; 
   padding: 30px 0 10px;
@@ -46,7 +46,7 @@ body {
   .logo-link {
     text-decoration: none;
     display: inline-block;
-    margin: 5px auto 0; // Reducido el margen inferior
+    margin: 5px auto 0;
   }
 
   .header-logo {
@@ -64,7 +64,7 @@ body {
     font-size: 0.95rem;
     font-style: italic;
     color: $wp-grey;
-    margin-top: 5px; // Se redujo de 20px a 5px para acercarlo al logo
+    margin-top: 5px;
     font-family: 'Playfair Display', serif;
   }
 }
@@ -101,36 +101,14 @@ body {
   }
 }
 
-// 5. ARTÍCULOS
+// 5. ESTRUCTURA DE CONTENIDO
 .content-area {
   max-width: 780px; 
   margin: 0 auto;
-
-  .article-header {
-    text-align: left;
-    margin-bottom: 35px;
-
-    h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 3rem;
-      font-weight: 900;
-      line-height: 1.1;
-      margin-bottom: 10px;
-    }
-
-    .byline {
-      font-size: 0.8rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      color: $brand-purple;
-      border-top: 1px solid $border-light;
-      padding-top: 10px;
-      display: block;
-    }
-  }
 }
 
-.main-article {
+// Estilos compartidos para artículos y páginas (post-content)
+.main-article, .post-content {
   font-size: 1.15rem;
   line-height: 1.8;
   color: #222;
@@ -141,222 +119,50 @@ body {
     padding: 10px 20px;
     background: #fdfdfd;
     font-style: italic;
+    font-family: 'Playfair Display', serif;
   }
 
+  // Estilo para tablas de datos (Rigor Numérico)
   table {
     width: 100%;
     border-collapse: collapse;
-    margin: 2rem 0;
-    th { background: #f4f4f4; padding: 10px; text-align: left; }
-    td { padding: 10px; border-bottom: 1px solid #eee; }
-  }
-}
-
-.main-footer {
-  margin-top: 60px;
-  padding: 40px 0;
-  border-top: 1px solid $wp-black;
-  text-align: center;
-}
-// Estilos específicos para la Portada Estilo Diario
-.featured-story {
-  text-align: left;
-  margin-bottom: 30px;
-  
-  .section-label {
-    color: $brand-purple;
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: 0.75rem;
-    letter-spacing: 1px;
-    margin-bottom: 10px;
-  }
-
-  .main-headline {
-    font-family: 'Playfair Display', serif;
-    font-size: 3rem;
-    line-height: 1.1;
-    margin: 0 0 20px 0;
+    margin: 2.5rem 0;
+    font-size: 0.95rem;
     
-    @media (max-width: 600px) {
-      font-size: 2rem;
+    th { 
+      background: #f4f4f4; 
+      padding: 12px; 
+      text-align: left; 
+      border-bottom: 2px solid $wp-black;
     }
-  }
-
-  .lead-text {
-    font-size: 1.25rem;
-    color: $wp-grey;
-    margin-bottom: 20px;
-  }
-}
-
-.double-divider {
-  border: 0;
-  border-top: 4px double $wp-black;
-  margin: 40px 0;
-}
-
-.home-grid {
-  display: flex;
-  gap: 40px;
-  flex-wrap: wrap;
-
-  .column-title {
-    font-family: 'Playfair Display', serif;
-    border-bottom: 1px solid $wp-black;
-    padding-bottom: 5px;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    font-size: 0.9rem;
-  }
-}
-
-.data-card {
-  margin-bottom: 15px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid $border-light;
-  
-  .badge {
-    background: $brand-yellow;
-    font-size: 0.65rem;
-    font-weight: 700;
-    padding: 2px 5px;
-    margin-right: 8px;
-  }
-}
-
-.home-quote {
-  font-family: 'Playfair Display', serif;
-  font-style: italic;
-  font-size: 1.1rem;
-  color: $brand-purple;
-  border-left: 3px solid $brand-purple;
-  padding-left: 15px;
-  margin: 20px 0;
-}
-.post-tags {
-  .tag-link {
-    font-size: 0.75rem;
-    color: $brand-purple;
-    background: #f4f4f4;
-    padding: 3px 10px;
-    border-radius: 3px;
-    text-decoration: none;
-    margin-right: 8px;
-    font-weight: 700;
-    text-transform: uppercase;
-    transition: all 0.2s ease;
-
-    &:hover {
-      background: $brand-yellow;
-      color: $wp-black;
-    }
-  }
-}
-
-.tags-archive {
-  margin-top: 40px;
-  h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-  }
-}
-
-.analysis-feed {
-  margin-top: 30px;
-
-  .feed-item {
-    margin-bottom: 40px;
     
-    .feed-metadata {
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      color: $wp-grey;
-      margin-bottom: 10px;
-      font-weight: 700;
-    }
-
-    .feed-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 2rem;
-      margin: 0 0 15px 0;
-      
-      a {
-        color: $wp-black;
-        text-decoration: none;
-        &:hover { color: $brand-purple; }
-      }
-    }
-
-    .feed-excerpt {
-      font-size: 1.1rem;
-      color: #444;
-      line-height: 1.6;
-      margin-bottom: 15px;
-    }
-
-    .read-more-link {
-      color: $brand-purple;
-      font-weight: 700;
-      text-decoration: none;
-      font-size: 0.9rem;
-      &:hover { border-bottom: 2px solid $brand-yellow; }
+    td { 
+      padding: 12px; 
+      border-bottom: 1px solid $border-light; 
     }
   }
-}
 
-.light-divider {
-  border: 0;
-  border-top: 1px solid $border-light;
-  margin: 30px 0;
-}
-// 8. ELEMENTOS DE ARTÍCULOS INDIVIDUALES
-.post-category {
-  display: inline-block;
-  background: $brand-yellow;
-  color: $wp-black;
-  padding: 2px 8px;
-  font-weight: 700;
-  text-transform: uppercase;
-  font-size: 0.7rem;
-  margin-bottom: 15px;
-  letter-spacing: 0.5px;
-}
-
-.post-meta {
-  font-size: 0.85rem;
-  color: $wp-grey;
-  margin-top: 15px;
-  font-weight: 400;
-  text-transform: uppercase;
-}
-
-.post-content {
-  margin-top: 30px;
-  // Ajuste para que las imágenes dentro de los posts no se desborden
+  // Imágenes estándar
   img {
     max-width: 100%;
     height: auto;
     display: block;
     margin: 2rem auto;
+    border-radius: 4px;
   }
-}
-// Estilos para Medios en Artículos
-.post-content {
-  // Imágenes con pie de foto
+
+  // Clase específica para imágenes medianas (como la de Quiénes Somos)
+  .medium-image {
+    max-width: 500px !important;
+    width: 100%;
+    margin: 2rem auto !important;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  }
+
   figure {
-    margin: 2rem 0;
+    margin: 2.5rem 0;
     text-align: center;
     
-    img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 4px;
-      border: 1px solid $border-light;
-    }
-
     figcaption {
       margin-top: 10px;
       font-size: 0.9rem;
@@ -365,106 +171,50 @@ body {
     }
   }
 
-  // Contenedor para videos responsivos (16:9)
   .video-container {
     position: relative;
     padding-bottom: 56.25%; 
     height: 0;
     overflow: hidden;
-    margin: 2rem 0;
-
+    margin: 2.5rem 0;
     iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border: 0;
+      position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;
     }
   }
 }
-.featured-image {
-  width: 100%;
-  height: auto;
-  border-radius: 4px;
-  margin-bottom: 25px;
-  display: block;
+
+// 6. PORTADA (INDEX)
+.featured-story {
+  margin-bottom: 30px;
+  .section-label {
+    color: $brand-purple;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    margin-bottom: 10px;
+  }
+  .main-headline {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    line-height: 1.1;
+    margin: 0 0 20px 0;
+    a { text-decoration: none; color: inherit; &:hover { color: $brand-purple; } }
+  }
+  .lead-text { font-size: 1.25rem; color: $wp-grey; margin-bottom: 20px; }
 }
+
 .data-dashboard {
   margin: 40px 0;
-  
-  .data-card {
-    flex: 1;
-    min-width: 250px;
-    background: #f9f9f9;
-    padding: 20px;
-    border-radius: 4px;
-    border-top: 4px solid $brand-yellow;
-    transition: transform 0.3s ease;
-
-    &:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    }
-
-    h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.5rem;
-      margin: 10px 0;
-      color: $brand-purple;
-    }
-
-    p {
-      font-size: 0.9rem;
-      color: $wp-grey;
-      line-height: 1.4;
-    }
-  }
-}
-
-.feed-title-small {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.4rem;
-  margin: 10px 0;
-  a { text-decoration: none; color: $wp-black; &:hover { color: $brand-purple; } }
-}
-
-.feed-excerpt-small { font-size: 0.95rem; color: #555; }
-// Redes Sociales en el Hero
-.social-bar {
-  margin-top: 20px;
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  font-size: 0.8rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: $wp-grey;
-
-  .social-icon {
-    color: $brand-purple;
-    text-decoration: none;
-    border: 1px solid $brand-purple;
-    padding: 5px 12px;
-    border-radius: 20px;
-    transition: all 0.3s ease;
-
-    &:hover {
-      background: $brand-purple;
-      color: $bg-white;
-    }
-  }
-}
-
-// Data Dashboard Interactivo
-.data-dashboard {
   .data-card {
     background: #fdfdfd;
     padding: 25px;
     border: 1px solid $border-light;
+    border-top: 4px solid $brand-yellow;
     text-align: center;
     flex: 1;
-    min-width: 200px;
+    min-width: 220px;
+    transition: transform 0.3s ease;
+    &:hover { transform: translateY(-5px); box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
 
     h3 {
       font-family: 'Playfair Display', serif;
@@ -473,16 +223,47 @@ body {
       margin: 10px 0;
       span { font-size: 1rem; color: $wp-grey; margin-left: 5px; }
     }
-
     p { font-size: 0.85rem; color: $wp-grey; line-height: 1.4; }
+    .badge { background: $brand-yellow; font-size: 0.65rem; font-weight: 700; padding: 2px 5px; }
   }
 }
-// Clase utilitaria para imágenes medianas en el contenido
-img.medium-image {
-  max-width: 600px !important; // Limita el ancho en pantallas grandes
-  width: 100%;   // Asegura que se achique en celulares
-  height: auto;
-  display: block;
-  margin: 2rem auto; // Centrado automático
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1); // Un toque sutil de profundidad
+
+.social-bar {
+  display: flex; gap: 15px; align-items: center; margin-top: 20px;
+  .social-icon {
+    color: $brand-purple; text-decoration: none; border: 1px solid $brand-purple;
+    padding: 5px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 700;
+    &:hover { background: $brand-purple; color: $bg-white; }
+  }
+}
+
+// 7. ELEMENTOS GRÁFICOS
+.double-divider { border: 0; border-top: 4px double $wp-black; margin: 40px 0; }
+.light-divider { border: 0; border-top: 1px solid $border-light; margin: 30px 0; }
+
+.home-grid { display: flex; gap: 40px; flex-wrap: wrap; }
+.column-title {
+  font-family: 'Playfair Display', serif;
+  border-bottom: 1px solid $wp-black;
+  padding-bottom: 5px; margin-bottom: 20px;
+  text-transform: uppercase; font-size: 0.9rem; width: 100%;
+}
+
+.home-quote {
+  font-family: 'Playfair Display', serif;
+  font-style: italic; font-size: 1.1rem;
+  color: $brand-purple; border-left: 3px solid $brand-purple;
+  padding-left: 15px; margin: 20px 0;
+}
+
+// 8. FOOTER
+.main-footer {
+  margin-top: 60px;
+  padding: 40px 0;
+  border-top: 1px solid $wp-black;
+  text-align: center;
+  .social-link {
+    color: $brand-purple; text-decoration: none; font-weight: 700;
+    &:hover { color: $brand-yellow; }
+  }
 }
