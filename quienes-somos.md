@@ -11,9 +11,9 @@ title: "Quiénes Somos"
 
 <hr class="double-divider">
 
-<div class="main-article">
+<div class="main-article post-content">
   <p class="lead-text">
-    <strong>Creamos</strong> es un espacio que enlaza lo político, lo profesional y lo académico, con vocación de análisis, propuesta e intervención transformadora. Entendemos la acción política como un proceso de <strong>investigación-acción</strong>: una interpretación rigurosa de la realidad que se traduce en iniciativas concretas para transformarla.
+    <strong>Creamos</strong> es un espacio que enlaza lo político, lo profesional y lo académico, con vocación de análisis, propuesta e intervención transformadora. Entendemos la acción política como un proceso de <strong>investigación-acción</strong>: parte de la interpretación rigurosa de la realidad y se traduce en iniciativas para transformarla.
   </p>
 
   <figure>
@@ -25,63 +25,48 @@ title: "Quiénes Somos"
     "No venimos solo a resistir, sino a vivir y a transformar con sentido colectivo."
   </div>
 
+  <br>
+
   ## Identidad Política: ¿Qué somos y qué no somos?
 
   | ¿Qué SOMOS? | ¿Qué NO somos? |
   |:---|:---|
-  | Una apuesta por la **transformación radical** (anticapitalista, democrática, antirracista y antipatriarcal). | Una estructura **cerrada o dogmática** que repite esquemas del pasado. |
-  | Un espacio que actúa desde una **ética humanista**, combinando teoría, acción y sensibilidad. | Una expresión de **sectarismo político** o purismo moral. |
-  | Un **colectivo autónomo** con vocación de unidad, articulado con otros procesos sociales. | Un grupo **clientelista, electorero** o atrapado en la lógica del cargo. |
-  | Una fuerza que busca incidir en lo **territorial, nacional e internacional**. | Un **emprendimiento sin alma política** que pierda su raíz militante. |
+  | Un espacio que enlaza lo **político, profesional y académico** con vocación transformadora. | Una estructura **cerrada o dogmática** que repite esquemas del pasado. |
+  | Una apuesta por la **transformación radical** (anticapitalista, democrática, antirracista y antipatriarcal). | Una expresión de **sectarismo político** o purismo moral. |
+  | Una fuerza que actúa desde una **ética humanista**, combinando teoría, acción y sensibilidad. | Un grupo **clientelista, electorero** o atrapado en la lógica del cargo. |
+  | Un colectivo **autónomo**, con vocación de unidad, articulado con procesos populares. | Un **emprendimiento sin alma política** que pierda su raíz militante. |
 
   <hr class="light-divider">
 
-  ## Principios Rectores
-
-  Nuestro quehacer se fundamenta en pilares éticos y políticos que guían cada análisis e intervención:
-
-  1. **Justicia social y dignidad:** La vida digna como derecho universal y reparación de desigualdades históricas.
-  2. **Crítica radical al capitalismo:** Cuestionamos la explotación económica, cultural y tecnológica.
-  3. **Tecnología y conocimiento para la liberación:** La ciencia y la técnica como herramientas para la autonomía y el cuidado de la vida.
-  4. **Justicia ambiental y defensa de la vida:** Asumimos el cuidado de la "casa común" frente al modelo depredador.
-  5. **Memorias vivas:** Nos reconocemos herederos de las luchas populares en Colombia y América Latina.
-  6. **Interseccionalidad:** Lucha frontal contra el patriarcado, el racismo y toda forma de opresión.
-  7. **Paz, vida y no repetición:** Apostamos por una paz con justicia social, feminista y territorial.
-  8. **Internacionalismo solidario:** Solidaridad entre los pueblos contra el imperialismo y el colonialismo.
+  ## Nuestros Principios
+  
+  1.  **Justicia social y dignidad:** Luchamos por una sociedad donde la vida digna sea un derecho y no un privilegio.
+  2.  **Crítica radical al capitalismo:** Cuestionamos las formas de explotación económica, política y tecnológica.
+  3.  **Tecnología para la liberación:** Creemos en la ciencia y la técnica como herramientas para la autonomía y el cuidado de la vida.
+  4.  **Justicia ambiental:** Asumimos el cuidado de la "casa común" frente al modelo depredador del capital.
+  5.  **Interseccionalidad:** Rechazamos el patriarcado, el racismo y cualquier forma de opresión.
+  6.  **Paz con dignidad:** Apostamos por una paz con justicia social, feminista, territorial y ambiental.
 
   <hr class="light-divider">
 
-  ## Objetivos del Laboratorio
+  ## Estructura de Trabajo
 
-  ### General
-  Fortalecer el proceso de transformación social y aportar a la reorganización del campo político de los sectores progresistas, populares y de izquierda en Colombia, mediante un espacio con identidad propia y capacidad de incidencia.
-
-  ### Específicos
-  * Aportar estratégicamente a los gobiernos con vocación de cambio desde una perspectiva crítica y autónoma.
-  * Activar iniciativas de base: medios populares, redes barriales y procesos de economía propia.
-  * Contribuir al debate público mediante la investigación crítica y la comunicación digital.
-  * Fortalecer las capacidades técnicas y políticas de nuestros integrantes.
-
-  <hr class="light-divider">
-
-  ## Grupos de Trabajo
-
-  ### 1. Investigación-Acción
-  Producimos saber situado y comprometido. No acumulamos datos; buscamos comprender para actuar. Nos organizamos en 5 grandes líneas:
+  ### Investigación-Acción
+  Producimos saber situado y comprometido en cinco líneas estratégicas:
   * Justicia de Género, Interseccionalidad y Diversidades.
   * Democracia, Derechos Humanos, Seguridad y Justicia.
   * Territorio, Vida Digna y Cuidado Colectivo.
-  * Educación, Cultura, Comunicación, Ciencia y Tecnologías Emancipadoras.
+  * Educación, Cultura, Comunicación y Tecnologías Emancipadoras.
   * Economía Popular y Trabajo Comunitario.
 
-  ### 2. Comunicaciones
-  Entendemos la comunicación como una herramienta estratégica para la disputa de sentidos y la construcción de identidad popular. Buscamos transformar imaginarios con una narrativa pedagógica, creativa y radical.
+  ### Comunicaciones
+  Entendemos la comunicación como una herramienta estratégica para la disputa de sentidos y la construcción de identidad popular, alimentada directamente por nuestros hallazgos técnicos.
 
-  ### 3. Productora Cultural Popular
-  Espacio de creación y gestión que acompaña iniciativas comunitarias, fortaleciendo economías propias y circuitos solidarios de producción para garantizar la autonomía de los procesos sociales.
+  ### Productora Cultural Popular
+  Un espacio de creación y gestión que pone herramientas al servicio de procesos sociales para fortalecer economías propias y circuitos solidarios.
 
-  ### 4. Gestión Administrativa y Financiera
-  Garantizamos la sostenibilidad de Creamos mediante la transparencia, la autogestión y el cuidado mutuo de nuestros recursos y responsabilidades.
+  ### Gestión Administrativa y Financiera
+  El corazón organizativo que garantiza nuestra sostenibilidad mediante la transparencia, la autogestión y el cuidado mutuo.
 
   <hr class="double-divider">
 
