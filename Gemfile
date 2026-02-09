@@ -1,7 +1,10 @@
 source "https://rubygems.org"
 
-# La versión de Jekyll que usaremos
-gem "jekyll", "~> 4.3.2"
+gem "jekyll", "~> 4.3.4"
 
-# Si usas el tema por defecto de GitHub o alguno específico, añádelo aquí
-# gem "github-pages", group: :jekyll_plugins
+# Plugins necesarios que Jekyll está buscando en tu _config.yml
+gem "jekyll-feed", "~> 0.17"
+gem "jekyll-seo-tag", "~> 2.8"
+
+# Necesario para Ruby 3.x en adelante
+gem "webrick", "~> 1.8"
