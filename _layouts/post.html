@@ -3,6 +3,9 @@ layout: default
 ---
 <article class="post-container">
   <header class="post-header">
+    {% if page.image %}
+  <img src="{{ page.image | relative_url }}" alt="{{ page.title }}" class="featured-image">
+{% endif %}
     <span class="post-category">{{ page.category | replace: "-", " " | capitalize }}</span>
     
     <h1 class="main-headline">{{ page.title }}</h1>
