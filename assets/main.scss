@@ -33,22 +33,44 @@ body {
 
 // 3. CABECERA (ESTILO PERIODÍSTICO)
 
-.header-logo {
-  display: block;
-  margin: 0 auto;
-  max-width: 200px; // Si se ve muy pequeño, aumenta esto a 500px
-  height: auto;
-  border: none;
-  
-  @media (max-width: 200px) {
-    max-width: 70px;
-  }
-}
+.main-header {
+  text-align: center; // Esto centra cualquier elemento inline o inline-block como el logo-link
+  padding: 30px 0 15px;
+  border-bottom: 2px solid $wp-black;
 
-.logo-link {
-  text-decoration: none;
-  display: inline-block;
-  margin: 10px 0;
+  .date-bar {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+    margin-bottom: 15px;
+  }
+
+  .logo-link {
+    text-decoration: none;
+    display: inline-block; // Permite que el text-align: center del padre funcione
+    margin: 10px auto;
+  }
+
+  .header-logo {
+    display: block;
+    margin: 0 auto;
+    max-width: 200px; // El tamaño que elegiste
+    height: auto;
+    border: none;
+    
+    @media (max-width: 600px) {
+      max-width: 150px; // Ajuste para que se vea bien en celulares
+    }
+  }
+
+  .tagline {
+    font-size: 0.95rem;
+    font-style: italic;
+    color: $wp-grey;
+    margin-top: 15px;
+    font-family: 'Playfair Display', serif;
+  }
 }
 
 // 4. NAVEGACIÓN (RESPONSIVE)
@@ -89,7 +111,7 @@ body {
 
 // 5. CUERPO DEL ANÁLISIS (ESTRUCTURA DE LECTURA)
 .content-area {
-  max-width: 780px; // Ancho óptimo de lectura
+  max-width: 780px; 
   margin: 0 auto;
 
   .article-header {
@@ -165,7 +187,6 @@ body {
     color: $brand-purple;
   }
 
-  // Tablas de datos del Análisis de Coyuntura
   table {
     width: 100%;
     border-collapse: collapse;
