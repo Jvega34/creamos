@@ -19,30 +19,20 @@
     <div class="site-container">
         <header class="main-header">
             <div class="date-bar">
-  {% assign date_format = "now" | date: "%A, %e de %B de %Y" %}
-  
-  {{ date_format | 
-    replace: "Monday", "Lunes" | 
-    replace: "Tuesday", "Martes" | 
-    replace: "Wednesday", "Miércoles" | 
-    replace: "Thursday", "Jueves" | 
-    replace: "Friday", "Viernes" | 
-    replace: "Saturday", "Sábado" | 
-    replace: "Sunday", "Domingo" | 
-    replace: "January", "Enero" | 
-    replace: "February", "Febrero" | 
-    replace: "March", "Marzo" | 
-    replace: "April", "Abril" | 
-    replace: "May", "Mayo" | 
-    replace: "June", "Junio" | 
-    replace: "July", "Julio" | 
-    replace: "August", "Agosto" | 
-    replace: "September", "Septiembre" | 
-    replace: "October", "Octubre" | 
-    replace: "November", "Noviembre" | 
-    replace: "December", "Diciembre" 
-  }}
-</div>
+                {% assign date_format = "now" | date: "%A, %e de %B de %Y" %}
+                {{ date_format | 
+                    replace: "Monday", "Lunes" | replace: "Tuesday", "Martes" | 
+                    replace: "Wednesday", "Miércoles" | replace: "Thursday", "Jueves" | 
+                    replace: "Friday", "Viernes" | replace: "Saturday", "Sábado" | 
+                    replace: "Sunday", "Domingo" | replace: "January", "Enero" | 
+                    replace: "February", "Febrero" | replace: "March", "Marzo" | 
+                    replace: "April", "Abril" | replace: "May", "Mayo" | 
+                    replace: "June", "Junio" | replace: "July", "Julio" | 
+                    replace: "August", "Agosto" | replace: "September", "Septiembre" | 
+                    replace: "October", "Octubre" | replace: "November", "Noviembre" | 
+                    replace: "December", "Diciembre" 
+                }}
+            </div>
             
             <a href="/" class="logo-link">
                 <img src="/assets/img/fondoClaro.png" alt="Logo Creamos" class="header-logo">
@@ -51,42 +41,28 @@
             <p class="tagline">Laboratorio de Análisis Político & Soberanía Digital</p>
         </header>
 
-     <nav class="main-nav">
-    <a href="/">Inicio</a>
-    <a href="/coyuntura">Análisis de Coyuntura</a>
-    <a href="/quienes-somos">Quiénes Somos</a>
-</nav>
+        <nav class="main-nav">
+            <a href="/">Inicio</a>
+            <a href="/coyuntura">Análisis de Coyuntura</a>
+            <a href="/quienes-somos">Quiénes Somos</a>
+        </nav>
 
         <main class="content-area">
-            {% if page.title %}
-            <header class="article-header">
-                <h1>{{ page.title }}</h1>
-                <div class="byline">Por Equipo de Investigación Creamos</div>
-            </header>
-            {% endif %}
-
             <article class="main-article">
                 {{ content }}
             </article>
         </main>
 
         <footer class="main-footer">
-            <p>&copy; {{ "now" | date: "%Y" }} Creamos.</p>
+            <hr class="light-divider">
+            <div class="footer-social" style="margin: 15px 0;">
+                <a href="https://instagram.com/creamoscolombia" class="social-link" target="_blank">Instagram</a> | 
+                <a href="https://x.com/creamos_co" class="social-link" target="_blank">X (Twitter)</a>
+            </div>
+            <p>&copy; {{ "now" | date: "%Y" }} Creamos - Laboratorio de Investigación-Acción</p>
+            <p style="font-size: 0.75rem; color: #666; font-style: italic; margin-top: 10px;">
+                "¡Que no se apague la esperanza. De nuevo amanece, y el gallo vuelve a cantar!"
+            </p>
         </footer>
-    </div>
-
-</body>
- <footer class="main-footer">
-  <div class="site-container">
-    <hr class="light-divider">
-    <p>&copy; 2026 Creamos - Laboratorio de Investigación-Acción</p>
-    <div class="footer-social" style="margin: 10px 0;">
-      <a href="https://instagram.com/creamoscolombia" class="social-link">Instagram</a> | 
-      <a href="https://x.com/creamos_co" class="social-link">X (Twitter)</a>
-    </div>
-    <p style="font-size: 0.75rem; color: #666; font-style: italic;">
-      "¡Que no se apague la esperanza. De nuevo amanece, y el gallo vuelve a cantar!" [cite: 2, 668]
-    </p>
-  </div>
-</footer>
+    </div> </body>
 </html>
