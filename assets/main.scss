@@ -158,3 +158,79 @@ body {
   border-top: 1px solid $wp-black;
   text-align: center;
 }
+// Estilos específicos para la Portada Estilo Diario
+.featured-story {
+  text-align: left;
+  margin-bottom: 30px;
+  
+  .section-label {
+    color: $brand-purple;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+  }
+
+  .main-headline {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    line-height: 1.1;
+    margin: 0 0 20px 0;
+    
+    @media (max-width: 600px) {
+      font-size: 2rem;
+    }
+  }
+
+  .lead-text {
+    font-size: 1.25rem;
+    color: $wp-grey;
+    margin-bottom: 20px;
+  }
+}
+
+.double-divider {
+  border: 0;
+  border-top: 4px double $wp-black;
+  margin: 40px 0;
+}
+
+.home-grid {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+
+  .column-title {
+    font-family: 'Playfair Display', serif;
+    border-bottom: 1px solid $wp-black;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+  }
+}
+
+.data-card {
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid $border-light;
+  
+  .badge {
+    background: $brand-yellow;
+    font-size: 0.65rem;
+    font-weight: 700;
+    padding: 2px 5px;
+    margin-right: 8px;
+  }
+}
+
+.home-quote {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 1.1rem;
+  color: $brand-purple;
+  border-left: 3px solid $brand-purple;
+  padding-left: 15px;
+  margin: 20px 0;
+}
