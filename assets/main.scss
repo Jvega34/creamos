@@ -390,3 +390,43 @@ body {
   margin-bottom: 25px;
   display: block;
 }
+.data-dashboard {
+  margin: 40px 0;
+  
+  .data-card {
+    flex: 1;
+    min-width: 250px;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 4px;
+    border-top: 4px solid $brand-yellow;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    }
+
+    h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      margin: 10px 0;
+      color: $brand-purple;
+    }
+
+    p {
+      font-size: 0.9rem;
+      color: $wp-grey;
+      line-height: 1.4;
+    }
+  }
+}
+
+.feed-title-small {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  margin: 10px 0;
+  a { text-decoration: none; color: $wp-black; &:hover { color: $brand-purple; } }
+}
+
+.feed-excerpt-small { font-size: 0.95rem; color: #555; }
