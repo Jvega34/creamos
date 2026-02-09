@@ -3,32 +3,42 @@ layout: default
 title: Inicio
 ---
 
-# Bienvenido a Creamos
-### Análisis Político · Rigor Técnico · Visión País
+<section class="featured-story">
+  <p class="section-label">Análisis de Coyuntura 2025</p>
+  <h1 class="main-headline">La paradoja del empleo en Colombia: Entre el descenso de la desocupación y el muro de la informalidad</h1>
+  <p class="lead-text">
+    A pesar de la reducción en las cifras de desempleo, la estructura laboral del país enfrenta retos de informalidad que desafían las métricas tradicionales. Presentamos un desglose técnico de las condiciones sociales actuales.
+  </p>
+  <a href="/coyuntura" class="main-link">Continuar leyendo el análisis completo →</a>
+</section>
 
-En **Creamos**, nuestra misión es elevar el debate público en Colombia a través de la difusión de ideas políticas respaldadas por análisis numéricos y técnicos. No nos limitamos a la opinión; nos enfocamos en los datos para proponer soluciones estructurales a los retos de nuestra sociedad.
+<hr class="double-divider">
 
----
+<div class="home-grid">
+  
+  <div class="data-column">
+    <h3 class="column-title">Indicadores Críticos</h3>
+    <div class="data-card">
+      <span class="badge">DATO 2025</span>
+      <p><strong>8.2%</strong> Tasa de desocupación nacional.</p>
+    </div>
+    <div class="data-card">
+      <span class="badge">DATO 2025</span>
+      <p><strong>56.4%</strong> Índice de informalidad laboral.</p>
+    </div>
+    <div class="data-card">
+      <span class="badge">DATO 2025</span>
+      <p><strong>4.1 pts</strong> Brecha de género en participación.</p>
+    </div>
+  </div>
 
-## Nuestra Metodología: El Positivismo como Herramienta
-Para nosotros, el **positivismo** no es sinónimo de optimismo ciego. Es el compromiso con el método científico y el análisis de hechos verificables para entender la realidad política y social. 
+  <div class="mission-column">
+    <h3 class="column-title">Nuestra Visión</h3>
+    <p>En <strong>Creamos</strong>, transformamos el rigor numérico en visión país. Somos un laboratorio dedicado a la soberanía tecnológica y el análisis político independiente.</p>
+    <blockquote class="home-quote">
+      "Sin datos propios no hay soberanía política."
+    </blockquote>
+    <a href="/quienes-somos" class="secondary-link">Conoce al equipo →</a>
+  </div>
 
-* **Datos sobre Dogmas:** Priorizamos la estadística y la evidencia empírica en cada publicación.
-* **Impacto Tecnológico:** Analizamos cómo la inteligencia artificial y las nuevas tecnologías están transformando el gobierno y la ciudadanía.
-* **Transparencia Técnica:** Compartimos nuestros procesos y modelos para que puedan ser auditados y replicados.
-
----
-
-## Ejes de Análisis
-### 📊 Análisis Numérico
-Proyecciones económicas, evaluación de políticas públicas y modelos de datos aplicados al contexto colombiano.
-
-### 🏛️ Visión Política
-Estructuración de propuestas para una organización política moderna, transparente y eficiente.
-
-### 🤖 Tecnología y Sociedad
-Exploración del impacto de la IA y la automatización en la gobernanza y la productividad nacional.
-
----
-
-> "Transformando la política en una ciencia de precisión para el bienestar común."
+</div>
