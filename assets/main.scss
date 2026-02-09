@@ -32,46 +32,24 @@ body {
 }
 
 // 3. CABECERA (ESTILO PERIODÍSTICO)
-// ... (Variables y configuración base se mantienen igual) ...
 
-.main-header {
-  text-align: center;
-  padding: 30px 0 15px;
-  border-bottom: 2px solid $wp-black;
-
-  .date-bar {
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    font-weight: 700;
-    margin-bottom: 15px;
-  }
-
-  // Estilo específico para el nuevo Logo
-  .header-logo {
-    max-width: 400px; // Tamaño ideal en Desktop
-    height: auto;
-    transition: transform 0.3s ease;
-    
-    &:hover {
-      transform: scale(1.02); // Efecto sutil al pasar el mouse
-    }
-
-    @media (max-width: 600px) {
-      max-width: 250px; // Se ajusta automáticamente para celulares
-    }
-  }
-
-  .tagline {
-    font-size: 0.95rem;
-    font-style: italic;
-    color: $wp-grey;
-    margin-top: 15px;
-    font-family: 'Playfair Display', serif;
+.header-logo {
+  display: block;
+  margin: 0 auto;
+  max-width: 400px; // Si se ve muy pequeño, aumenta esto a 500px
+  height: auto;
+  border: none;
+  
+  @media (max-width: 600px) {
+    max-width: 280px;
   }
 }
 
-// ... (Resto del archivo se mantiene igual) ...
+.logo-link {
+  text-decoration: none;
+  display: inline-block;
+  margin: 10px 0;
+}
 
 // 4. NAVEGACIÓN (RESPONSIVE)
 .main-nav {
