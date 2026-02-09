@@ -430,3 +430,50 @@ body {
 }
 
 .feed-excerpt-small { font-size: 0.95rem; color: #555; }
+// Redes Sociales en el Hero
+.social-bar {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $wp-grey;
+
+  .social-icon {
+    color: $brand-purple;
+    text-decoration: none;
+    border: 1px solid $brand-purple;
+    padding: 5px 12px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: $brand-purple;
+      color: $bg-white;
+    }
+  }
+}
+
+// Data Dashboard Interactivo
+.data-dashboard {
+  .data-card {
+    background: #fdfdfd;
+    padding: 25px;
+    border: 1px solid $border-light;
+    text-align: center;
+    flex: 1;
+    min-width: 200px;
+
+    h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem;
+      color: $brand-purple;
+      margin: 10px 0;
+      span { font-size: 1rem; color: $wp-grey; margin-left: 5px; }
+    }
+
+    p { font-size: 0.85rem; color: $wp-grey; line-height: 1.4; }
+  }
+}
