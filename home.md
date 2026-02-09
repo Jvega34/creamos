@@ -2,7 +2,7 @@
 ---
 layout: default
 title: Inicio
-permalink: /home/
+permalink: /home
 ---
 
 <div class="featured-article">
