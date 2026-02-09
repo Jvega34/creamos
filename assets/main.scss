@@ -1,22 +1,20 @@
 ---
-# Las tres líneas de guiones son obligatorias para que Jekyll procese el SCSS
 ---
 
-// 1. VARIABLES DE MARCA Y ESTILO
-$brand-purple: #63055d; // Imperial Purple
-$brand-yellow: #ffcc29; // Dandelion
+// 1. VARIABLES
+$brand-purple: #63055d; 
+$brand-yellow: #ffcc29; 
 $wp-black: #111111;
 $wp-grey: #666666;
 $border-light: #e2e2e2;
 $bg-white: #ffffff;
 
-// 2. CONFIGURACIÓN BASE
+// 2. BASE
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-family: 'Inter', sans-serif;
   color: $wp-black;
   margin: 0;
   padding: 0;
-  line-height: 1.6;
   background-color: $bg-white;
   -webkit-font-smoothing: antialiased;
 }
@@ -31,10 +29,10 @@ body {
   }
 }
 
-// 3. CABECERA (ESTILO PERIODÍSTICO)
+// 3. CABECERA (Ajustada para cercanía)
 .main-header {
   text-align: center; 
-  padding: 40px 0 20px;
+  padding: 30px 0 10px;
   border-bottom: 2px solid $wp-black;
 
   .date-bar {
@@ -42,38 +40,36 @@ body {
     text-transform: uppercase;
     letter-spacing: 1.5px;
     font-weight: 700;
-    margin-bottom: 20px;
-    color: $wp-black;
+    margin-bottom: 15px;
   }
 
   .logo-link {
     text-decoration: none;
     display: inline-block;
-    margin: 10px auto;
+    margin: 5px auto 0; // Reducido el margen inferior
   }
 
   .header-logo {
     display: block;
     margin: 0 auto;
-    max-width: 400px; // Aumento de tamaño para mayor impacto visual
+    max-width: 400px; 
     height: auto;
-    border: none;
     
     @media (max-width: 600px) {
-      max-width: 280px; // Tamaño ajustado para que destaque en móviles sin saturar
+      max-width: 280px; 
     }
   }
 
   .tagline {
-    font-size: 1rem;
+    font-size: 0.95rem;
     font-style: italic;
     color: $wp-grey;
-    margin-top: 20px;
+    margin-top: 5px; // Se redujo de 20px a 5px para acercarlo al logo
     font-family: 'Playfair Display', serif;
   }
 }
 
-// 4. NAVEGACIÓN (RESPONSIVE)
+// 4. NAVEGACIÓN
 .main-nav {
   border-bottom: 1px solid $border-light;
   padding: 15px 0;
@@ -102,123 +98,63 @@ body {
       color: $brand-purple;
       border-bottom: 2px solid $brand-yellow;
     }
-
-    @media (max-width: 600px) {
-      font-size: 0.75rem;
-    }
   }
 }
 
-// 5. CUERPO DEL ANÁLISIS
+// 5. ARTÍCULOS
 .content-area {
   max-width: 780px; 
   margin: 0 auto;
 
   .article-header {
     text-align: left;
-    margin-bottom: 40px;
+    margin-bottom: 35px;
 
     h1 {
       font-family: 'Playfair Display', serif;
-      font-size: 3.2rem;
+      font-size: 3rem;
       font-weight: 900;
-      line-height: 1.05;
-      margin: 0 0 15px 0;
-      letter-spacing: -0.5px;
-
-      @media (max-width: 600px) {
-        font-size: 2.1rem;
-      }
-    }
-
-    .description {
-      font-size: 1.3rem;
-      line-height: 1.4;
-      color: $wp-grey;
-      margin-bottom: 20px;
-      font-weight: 400;
-
-      @media (max-width: 600px) {
-        font-size: 1.1rem;
-      }
+      line-height: 1.1;
+      margin-bottom: 10px;
     }
 
     .byline {
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       font-weight: 700;
       text-transform: uppercase;
       color: $brand-purple;
       border-top: 1px solid $border-light;
-      padding-top: 15px;
-      display: inline-block;
-      width: 100%;
+      padding-top: 10px;
+      display: block;
     }
   }
 }
 
-// 6. ESTILOS DE TEXTO Y CONTENIDO
 .main-article {
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   line-height: 1.8;
   color: #222;
-
-  @media (max-width: 600px) {
-    font-size: 1.1rem;
-    line-height: 1.7;
-  }
-
-  p { margin-bottom: 1.8rem; }
-
-  h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 2rem;
-    margin-top: 2.5rem;
-    border-bottom: 1px solid $border-light;
-    padding-bottom: 10px;
-  }
 
   blockquote {
     border-left: 5px solid $brand-yellow;
     margin: 2rem 0;
-    padding: 10px 25px;
-    background: #f9f9f9;
+    padding: 10px 20px;
+    background: #fdfdfd;
     font-style: italic;
-    font-size: 1.3rem;
-    color: $brand-purple;
   }
 
   table {
     width: 100%;
     border-collapse: collapse;
     margin: 2rem 0;
-    font-size: 0.95rem;
-
-    th {
-      background: $wp-black;
-      color: #fff;
-      padding: 12px;
-      text-align: left;
-      text-transform: uppercase;
-    }
-
-    td {
-      padding: 12px;
-      border-bottom: 1px solid $border-light;
-    }
+    th { background: #f4f4f4; padding: 10px; text-align: left; }
+    td { padding: 10px; border-bottom: 1px solid #eee; }
   }
 }
 
-// 7. PIE DE PÁGINA
 .main-footer {
-  margin-top: 80px;
-  padding: 60px 0;
+  margin-top: 60px;
+  padding: 40px 0;
   border-top: 1px solid $wp-black;
   text-align: center;
-  
-  p {
-    font-size: 0.85rem;
-    color: $wp-grey;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-  }
 }
