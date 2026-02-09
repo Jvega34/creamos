@@ -477,3 +477,12 @@ body {
     p { font-size: 0.85rem; color: $wp-grey; line-height: 1.4; }
   }
 }
+// Clase utilitaria para imágenes medianas en el contenido
+img.medium-image {
+  max-width: 600px !important; // Limita el ancho en pantallas grandes
+  width: 100%;   // Asegura que se achique en celulares
+  height: auto;
+  display: block;
+  margin: 2rem auto; // Centrado automático
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1); // Un toque sutil de profundidad
+}
