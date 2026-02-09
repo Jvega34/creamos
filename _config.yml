@@ -6,8 +6,6 @@ email: johan.rvega34@gmail.com
 baseurl: "/creamos"
 url: "https://Jvega34.github.io"
 logo: assets/img/fondoClaro.png
-# Usamos el tema estándar para mayor estabilidad
-theme: minima
 
 # Menú de Navegación
 header_pages:
