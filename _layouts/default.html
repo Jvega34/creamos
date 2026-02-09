@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <link rel="icon" type="image/png" href="/favicon.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }} | Creamos</title>
     
-    <meta name="msapplication-TileImage" content="{{ '/assets/img/CREAMOS-LOGO-05.png?v=2' | relative_url }}">
+    <link rel="icon" type="image/png" href="{{ '/favicon.png' | relative_url }}">
+    <link rel="apple-touch-icon" href="{{ '/favicon.png' | relative_url }}">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ '/assets/main.css?v=1' | relative_url }}">
+    
+    <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
 </head>
 <body>
 
@@ -20,9 +21,11 @@
             <div class="date-bar">
                 {{ "now" | date: "%A, %e de %B de %Y" | replace: "Monday", "Lunes" | replace: "Tuesday", "Martes" | replace: "Wednesday", "Miércoles" | replace: "Thursday", "Jueves" | replace: "Friday", "Viernes" | replace: "Saturday", "Sábado" | replace: "Sunday", "Domingo" }}
             </div>
-            <h1 class="site-logo">
-                <a href="{{ '/' | relative_url }}">CREAMOS</a>
-            </h1>
+            
+            <a href="{{ '/' | relative_url }}" class="logo-link">
+                <img src="{{ '/assets/img/fondoClaro.png' | relative_url }}" alt="Logo Creamos" class="header-logo">
+            </a>
+            
             <p class="tagline">Laboratorio de Análisis Político & Soberanía Digital</p>
         </header>
 
@@ -36,9 +39,6 @@
             {% if page.title %}
             <header class="article-header">
                 <h1>{{ page.title }}</h1>
-                {% if page.description %}
-                <p class="description">{{ page.description }}</p>
-                {% endif %}
                 <div class="byline">Por Equipo de Investigación Creamos</div>
             </header>
             {% endif %}
@@ -49,8 +49,7 @@
         </main>
 
         <footer class="main-footer">
-            <p>&copy; {{ "now" | date: "%Y" }} Creamos. Todos los derechos reservados.</p>
-            <p style="font-size: 0.7rem; margin-top: 10px; color: #999;">Bogotá, Colombia</p>
+            <p>&copy; {{ "now" | date: "%Y" }} Creamos. Rigor técnico y compromiso social.</p>
         </footer>
     </div>
 
