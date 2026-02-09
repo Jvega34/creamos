@@ -5,23 +5,34 @@ description: >-
 email: johan.rvega34@gmail.com
 baseurl: ""
 url: "https://creamos-8d28e.web.app"
-logo: /assets/img/fondoClaro.png
+logo: "/assets/img/fondoClaro.png"
 
-# Configuración de URLs limpias (Crucial)
+# 1. AJUSTE DE TIEMPO (Crucial para que aparezcan los posts)
+timezone: America/Bogota
+future: true
+
+# 2. CONFIGURACIÓN DE URLS LIMPIAS
 permalink: pretty
 
-# Menú de Navegación (Referencia interna)
+# 3. COLECCIONES Y CATEGORÍAS
+# Esto ayuda a Jekyll a organizar mejor los metadatos
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post" # Todos los archivos en _posts usarán este layout por defecto
+
+# Menú de Navegación (URLs finales, no nombres de archivos)
 header_pages:
-  - index.md
-  - home.md
-  - coyuntura.md
-  - quienes-somos.md
+  - /
+  - /coyuntura/
+  - /quienes-somos/
 
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
 
-# Excluir archivos innecesarios del build
 exclude:
   - Gemfile
   - Gemfile.lock
@@ -29,3 +40,4 @@ exclude:
   - .github
   - cloudbuild.yaml
   - firebase.json
+  - node_modules
