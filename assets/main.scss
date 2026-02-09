@@ -262,3 +262,53 @@ body {
     margin-bottom: 20px;
   }
 }
+
+.analysis-feed {
+  margin-top: 30px;
+
+  .feed-item {
+    margin-bottom: 40px;
+    
+    .feed-metadata {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: $wp-grey;
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+
+    .feed-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      margin: 0 0 15px 0;
+      
+      a {
+        color: $wp-black;
+        text-decoration: none;
+        &:hover { color: $brand-purple; }
+      }
+    }
+
+    .feed-excerpt {
+      font-size: 1.1rem;
+      color: #444;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+
+    .read-more-link {
+      color: $brand-purple;
+      font-weight: 700;
+      text-decoration: none;
+      font-size: 0.9rem;
+      &:hover { border-bottom: 2px solid $brand-yellow; }
+    }
+  }
+}
+
+.light-divider {
+  border: 0;
+  border-top: 1px solid $border-light;
+  margin: 30px 0;
+}
