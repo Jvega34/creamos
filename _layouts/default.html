@@ -5,14 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }} | Creamos</title>
     
-    <link rel="icon" type="image/png" href="{{ '/favicon.png' | relative_url }}">
-    <link rel="apple-touch-icon" href="{{ '/favicon.png' | relative_url }}">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="shortcut icon" type="image/png" href="/favicon.png">
+    <link rel="apple-touch-icon" href="/favicon.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;700&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
+    <link rel="stylesheet" href="/assets/main.css">
 </head>
 <body>
 
@@ -22,17 +23,17 @@
                 {{ "now" | date: "%A, %e de %B de %Y" | replace: "Monday", "Lunes" | replace: "Tuesday", "Martes" | replace: "Wednesday", "Miércoles" | replace: "Thursday", "Jueves" | replace: "Friday", "Viernes" | replace: "Saturday", "Sábado" | replace: "Sunday", "Domingo" }}
             </div>
             
-            <a href="{{ '/' | relative_url }}" class="logo-link">
-                <img src="{{ '/assets/img/fondoClaro.png' | relative_url }}" alt="Logo Creamos" class="header-logo">
+            <a href="/" class="logo-link">
+                <img src="/assets/img/fondoClaro.png" alt="Logo Creamos" class="header-logo">
             </a>
             
             <p class="tagline">Laboratorio de Análisis Político & Soberanía Digital</p>
         </header>
 
         <nav class="main-nav">
-            <a href="{{ '/' | relative_url }}">Inicio</a>
-            <a href="{{ '/analisis' | relative_url }}">Análisis de Coyuntura</a>
-            <a href="{{ '/quienes-somos' | relative_url }}">Quiénes Somos</a>
+            <a href="/">Inicio</a>
+            <a href="/analisis">Análisis de Coyuntura</a>
+            <a href="/quienes-somos">Quiénes Somos</a>
         </nav>
 
         <main class="content-area">
