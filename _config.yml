@@ -5,12 +5,27 @@ description: >-
 email: johan.rvega34@gmail.com
 baseurl: ""
 url: "https://creamos-8d28e.web.app"
-logo: assets/img/fondoClaro.png
+logo: /assets/img/fondoClaro.png
 
-# Menú de Navegación
+# Configuración de URLs limpias (Crucial)
+permalink: pretty
+
+# Menú de Navegación (Referencia interna)
 header_pages:
   - index.md
+  - home.md
+  - coyuntura.md
   - quienes-somos.md
+
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+
+# Excluir archivos innecesarios del build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .github
+  - cloudbuild.yaml
+  - firebase.json
