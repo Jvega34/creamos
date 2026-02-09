@@ -32,10 +32,9 @@ body {
 }
 
 // 3. CABECERA (ESTILO PERIODÍSTICO)
-
 .main-header {
-  text-align: center; // Esto centra cualquier elemento inline o inline-block como el logo-link
-  padding: 30px 0 15px;
+  text-align: center; 
+  padding: 40px 0 20px;
   border-bottom: 2px solid $wp-black;
 
   .date-bar {
@@ -43,32 +42,33 @@ body {
     text-transform: uppercase;
     letter-spacing: 1.5px;
     font-weight: 700;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    color: $wp-black;
   }
 
   .logo-link {
     text-decoration: none;
-    display: inline-block; // Permite que el text-align: center del padre funcione
+    display: inline-block;
     margin: 10px auto;
   }
 
   .header-logo {
     display: block;
     margin: 0 auto;
-    max-width: 200px; // El tamaño que elegiste
+    max-width: 400px; // Aumento de tamaño para mayor impacto visual
     height: auto;
     border: none;
     
     @media (max-width: 600px) {
-      max-width: 150px; // Ajuste para que se vea bien en celulares
+      max-width: 280px; // Tamaño ajustado para que destaque en móviles sin saturar
     }
   }
 
   .tagline {
-    font-size: 0.95rem;
+    font-size: 1rem;
     font-style: italic;
     color: $wp-grey;
-    margin-top: 15px;
+    margin-top: 20px;
     font-family: 'Playfair Display', serif;
   }
 }
@@ -76,17 +76,17 @@ body {
 // 4. NAVEGACIÓN (RESPONSIVE)
 .main-nav {
   border-bottom: 1px solid $border-light;
-  padding: 12px 0;
+  padding: 15px 0;
   text-align: center;
   margin-bottom: 40px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 25px;
 
   @media (max-width: 600px) {
-    gap: 10px;
-    padding: 10px 0;
+    gap: 15px;
+    padding: 12px 0;
     margin-bottom: 25px;
   }
 
@@ -94,7 +94,7 @@ body {
     text-decoration: none;
     color: $wp-black;
     font-weight: 700;
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     text-transform: uppercase;
     letter-spacing: 0.5px;
     
@@ -104,12 +104,12 @@ body {
     }
 
     @media (max-width: 600px) {
-      font-size: 0.7rem;
+      font-size: 0.75rem;
     }
   }
 }
 
-// 5. CUERPO DEL ANÁLISIS (ESTRUCTURA DE LECTURA)
+// 5. CUERPO DEL ANÁLISIS
 .content-area {
   max-width: 780px; 
   margin: 0 auto;
