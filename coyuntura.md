@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Coyuntura
-permalink: /coyuntura/
+title: Análisis de Coyuntura
+permalink: /coyuntura
 ---
 
 <div class="featured-article">
