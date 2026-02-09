@@ -4,26 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }} | Creamos</title>
+    
+    <link rel="icon" type="image/png" href="{{ '/assets/img/CREAMOS-LOGO-05.png' | relative_url }}">
+    <link rel="apple-touch-icon" href="{{ '/assets/img/CREAMOS-LOGO-05.png' | relative_url }}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
 </head>
 <body>
 
-    <header>
-        <h1>{{ site.title | default: "CREAMOS" }}</h1>
-    </header>
+    <div class="site-container">
+        <header class="main-header">
+            <div class="date-bar">
+                {{ "now" | date: "%A, %e de %B de %Y" | replace: "Monday", "Lunes" | replace: "Tuesday", "Martes" | replace: "Wednesday", "Miércoles" | replace: "Thursday", "Jueves" | replace: "Friday", "Viernes" | replace: "Saturday", "Sábado" | replace: "Sunday", "Domingo" }}
+            </div>
+            <h1 class="site-logo">
+                <a href="{{ '/' | relative_url }}">CREAMOS</a>
+            </h1>
+            <p class="tagline">Laboratorio de Análisis Político & Soberanía Digital</p>
+        </header>
 
-    <nav>
-        <a href="{{ '/' | relative_url }}">Inicio</a>
-        <a href="{{ '/quienes-somos' | relative_url }}">Quiénes Somos</a>
-    </nav>
+        <nav class="main-nav">
+            <a href="{{ '/' | relative_url }}">Inicio</a>
+            <a href="{{ '/analisis' | relative_url }}">Análisis de Coyuntura</a>
+            <a href="{{ '/quienes-somos' | relative_url }}">Quiénes Somos</a>
+        </nav>
 
-    <main>
-        {{ content }}
-    </main>
+        <main class="content-area">
+            {% if page.title %}
+            <header class="article-header">
+                <h1>{{ page.title }}</h1>
+                {% if page.description %}
+                <p class="description">{{ page.description }}</p>
+                {% endif %}
+                <div class="byline">Por Equipo de Investigación Creamos</div>
+            </header>
+            {% endif %}
 
-    <footer>
-        <p>&copy; 2026 Creamos - Laboratorio de Análisis Político</p>
-    </footer>
+            <article class="main-article">
+                {{ content }}
+            </article>
+        </main>
+
+        <footer class="main-footer">
+            <p>&copy; {{ "now" | date: "%Y" }} Creamos. Todos los derechos reservados.</p>
+            <p style="font-size: 0.7rem; margin-top: 10px; color: #999;">Bogotá, Colombia</p>
+        </footer>
+    </div>
 
 </body>
 </html>
