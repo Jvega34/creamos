@@ -3,42 +3,58 @@ layout: default
 title: Inicio
 ---
 
+{% assign latest_post = site.posts.first %}
 <section class="featured-story">
-  <p class="section-label">Análisis de Coyuntura 2025</p>
-  <h1 class="main-headline">La paradoja del empleo en Colombia: Entre el descenso de la desocupación y el muro de la informalidad</h1>
-  <p class="lead-text">
-    A pesar de la reducción en las cifras de desempleo, la estructura laboral del país enfrenta retos de informalidad que desafían las métricas tradicionales. Presentamos un desglose técnico de las condiciones sociales actuales.
-  </p>
-  <a href="/coyuntura" class="main-link">Continuar leyendo el análisis completo →</a>
+  <p class="section-label">Análisis Destacado</p>
+  <h1 class="main-headline">
+    <a href="{{ latest_post.url }}" style="text-decoration:none; color:inherit;">{{ latest_post.title }}</a>
+  </h1>
+  <p class="lead-text">{{ latest_post.description }}</p>
+  <a href="{{ latest_post.url }}" class="read-more-link">Leer investigación completa →</a>
 </section>
 
 <hr class="double-divider">
 
-<div class="home-grid">
-  
-  <div class="data-column">
-    <h3 class="column-title">Indicadores Críticos</h3>
+<section class="data-dashboard">
+  <div class="column-title">Pulso de la Nación (Cifras Clave)</div>
+  <div class="home-grid">
     <div class="data-card">
-      <span class="badge">DATO 2025</span>
-      <p><strong>8.2%</strong> Tasa de desocupación nacional.</p>
+      <span class="badge">TRABAJO</span>
+      <h3>55%</h3>
+      <p>Tasa de informalidad laboral en Colombia al cierre de 2025.</p>
     </div>
     <div class="data-card">
-      <span class="badge">DATO 2025</span>
-      <p><strong>56.4%</strong> Índice de informalidad laboral.</p>
+      <span class="badge">SALUD</span>
+      <h3>2.5 min</h3>
+      <p>Frecuencia con la que se radica una tutela por derecho a la salud.</p>
     </div>
     <div class="data-card">
-      <span class="badge">DATO 2025</span>
-      <p><strong>4.1 pts</strong> Brecha de género en participación.</p>
+      <span class="badge">AMBIENTE</span>
+      <h3>2.8x</h3>
+      <p>Calidad del aire por encima del límite de la OMS.</p>
     </div>
   </div>
+</section>
 
-  <div class="mission-column">
-    <h3 class="column-title">Nuestra Visión</h3>
-    <p>En <strong>Creamos</strong>, transformamos el rigor numérico en visión país. Somos un laboratorio dedicado a la soberanía tecnológica y el análisis político independiente.</p>
-    <blockquote class="home-quote">
-      "Sin datos propios no hay soberanía política."
-    </blockquote>
-    <a href="/quienes-somos" class="secondary-link">Conoce al equipo →</a>
+<hr class="double-divider">
+
+<section class="recent-feed">
+  <div class="column-title">Últimas Investigaciones</div>
+  <div class="home-grid">
+    {% for post in site.posts offset:1 limit:2 %}
+    <div class="feed-column">
+      <article class="feed-item-small">
+        <span class="post-category" style="font-size: 0.6rem;">{{ post.category | capitalize }}</span>
+        <h2 class="feed-title-small">
+          <a href="{{ post.url }}">{{ post.title }}</a>
+        </h2>
+        <p class="feed-excerpt-small">{{ post.description | truncate: 120 }}</p>
+      </article>
+    </div>
+    {% endfor %}
   </div>
+</section>
 
+<div class="home-quote" style="text-align: center; border-left: none; border-top: 1px solid #63055d; padding-top: 20px;">
+  "¡Que no se apague la esperanza. De nuevo amanece, y el gallo vuelve a cantar!"
 </div>
