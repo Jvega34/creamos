@@ -312,3 +312,34 @@ body {
   border-top: 1px solid $border-light;
   margin: 30px 0;
 }
+// 8. ELEMENTOS DE ARTÍCULOS INDIVIDUALES
+.post-category {
+  display: inline-block;
+  background: $brand-yellow;
+  color: $wp-black;
+  padding: 2px 8px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  margin-bottom: 15px;
+  letter-spacing: 0.5px;
+}
+
+.post-meta {
+  font-size: 0.85rem;
+  color: $wp-grey;
+  margin-top: 15px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.post-content {
+  margin-top: 30px;
+  // Ajuste para que las imágenes dentro de los posts no se desborden
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 2rem auto;
+  }
+}
