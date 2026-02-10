@@ -17,8 +17,12 @@ title: "Quiénes Somos"
   </p>
 
   <figure>
-   <img src="/assets/img/tu-foto-quienes-somos.jpg" alt="Equipo Creamos" class="medium-image">
-    <figcaption>Investigación con rigor, acción con esperanza. Registro del laboratorio de pensamiento Creamos.</figcaption>
+  <div style="text-align: center;">
+  <img src="{{ 'assets/img/posts/quienes1.jpg' | relative_url }}" 
+       alt="Equipo Creamos" 
+       class="medium-image">
+</div>
+    <figcaption>Investigación con rigor, acción con esperanza. Registro del laboratorio de pensamiento. Creamos 2025.</figcaption>
   </figure>
 
   <div class="home-quote">
