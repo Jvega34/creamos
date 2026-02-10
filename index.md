@@ -32,15 +32,23 @@ title: Inicio
     </section>
   </div>
 
-  <aside class="home-sidebar">
-    <h3 class="sidebar-title">📢 Últimos Cacareos</h3>
-    {% for post in site.cacareos limit:5 %}
-      <div class="sidebar-card">
-        <div style="font-size: 0.7rem; font-weight: 700; color: #666;">#{{ post.number }}</div>
-        <h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
+ <aside class="home-sidebar">
+  <h3 class="sidebar-title">📢 Últimos Cacareos</h3>
+
+  {% assign cacareos_ordenados = site.cacareos | sort: 'date' | reverse %}
+
+  {% for post in cacareos_ordenados limit:5 %}
+    <div class="sidebar-card">
+      <div style="font-size: 0.7rem; font-weight: 700; color: #666;">
+        #{{ post.number }} | {{ post.date | date: "%d/%m/%y" }}
       </div>
-    {% endfor %}
-    <a href="/cacareos" style="display: block; margin-top: 20px; font-size: 0.8rem; font-weight: 700; color: #63055d;">Ver historial completo →</a>
-  </aside>
+      <h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
+    </div>
+  {% endfor %}
+
+  <a href="/cacareos" style="display: block; margin-top: 20px; font-size: 0.8rem; font-weight: 700; color: #63055d; text-decoration: none;">
+    Ver historial completo →
+  </a>
+</aside>
 
 </div>
