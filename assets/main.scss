@@ -168,3 +168,31 @@ img {
   margin: 10px 0;
   border-radius: 4px;
 }
+// =========================================
+// ESTILO ESPECIAL PARA CACAREOS (BURBUJA)
+// =========================================
+
+.post-content {
+  // Si el post tiene el título "CACAREO", aplicamos este estilo
+  h1:contains("CACAREO"), 
+  & {
+    background: #fdfdfd;
+    padding: 30px;
+    border-left: 8px solid #25D366; // El verde de WhatsApp para identidad de red
+    border-radius: 4px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+
+    h1, h2, h3 {
+      color: #128C7E; // Verde oscuro tipo chat
+      font-family: 'Inter', sans-serif;
+      font-weight: 800;
+    }
+
+    strong {
+      color: $brand-purple; // Mantenemos nuestra identidad morada en las negritas
+    }
+  }
+}
