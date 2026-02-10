@@ -134,3 +134,23 @@ body {
   text-align: center;
   font-size: 0.9rem;
 }
+// =========================================
+// CONTROL DE IMÁGENES EN CONTENIDO
+// =========================================
+
+.post-content {
+  // Regla general: ninguna imagen se sale de los bordes
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 2rem auto; // Centrada y con aire arriba/abajo
+    border-radius: 4px;
+  }
+
+  // La clase específica para tu imagen de Quiénes Somos
+  .medium-image {
+    max-width: 550px !important; // El tamaño ideal que acordamos
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1); // Un toque de sombra para que resalte
+  }
+}
