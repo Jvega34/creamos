@@ -1,38 +1,50 @@
+# =========================================
+# CONFIGURACIÓN GENERAL - CREAMOS
+# =========================================
 title: Creamos
 description: >-
-  Difusión de ideas políticas y análisis técnico. 
-  Transformando datos en visión país desde el rigor numérico.
+  Análisis político para la soberanía y la libertad nacional. 
+  Un espacio de investigación-acción y formación popular.
 email: johan.rvega34@gmail.com
 url: "https://creamoscolombia.org"
 baseurl: ""
 logo: "/assets/img/fondoClaro.png"
 
-# 1. AJUSTE DE TIEMPO (Crucial para que aparezcan los posts)
+# 1. AJUSTES DE TIEMPO
+# Crucial para que los posts del mismo día aparezcan de inmediato
 timezone: America/Bogota
 future: true
 
 # 2. CONFIGURACIÓN DE URLS LIMPIAS
 permalink: pretty
 
-# 3. COLECCIONES Y CATEGORÍAS
-# Esto ayuda a Jekyll a organizar mejor los metadatos
+# 3. COLECCIONES (Aquí estaba el fallo)
+# Esto le dice a Jekyll: "La carpeta _cacareos es especial, léela"
+collections:
+  cacareos:
+    output: true
+    permalink: /cacareos/:title/
+
+# 4. VALORES POR DEFECTO
 defaults:
   - scope:
       path: ""
       type: "posts"
     values:
-      layout: "post" # Todos los archivos en _posts usarán este layout por defecto
+      layout: "post"
+  - scope:
+      path: ""
+      type: "cacareos" # Asigna el layout automáticamente a los cacareos
+    values:
+      layout: "post"
 
-# Menú de Navegación (URLs finales, no nombres de archivos)
-header_pages:
-  - /
-  - /coyuntura/
-  - /quienes-somos/
-
+# 5. PLUGINS
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-sitemap
 
+# 6. EXCLUSIONES
 exclude:
   - Gemfile
   - Gemfile.lock
