@@ -1,106 +1,87 @@
 ---
 ---
 
-// 1. VARIABLES Y COLORES
-$brand-purple: #63055d; 
-$brand-yellow: #ffcc29; 
-$wp-black: #111111;
-$wp-grey: #666666;
-$bg-white: #ffffff;
+// (Mantén tus variables arriba: $brand-purple, $brand-yellow, etc.)
 
-// 2. BASE (Fuente: Inter)
-body {
-  font-family: 'Inter', sans-serif;
-  color: $wp-black;
-  line-height: 1.6;
-  background-color: $bg-white;
-}
+// =========================================
+// 1. EL GRID DE LA PORTADA (2 COLUMNAS)
+// =========================================
+.home-grid-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr; // Columna principal (2 partes) y Sidebar (1 parte)
+  gap: 40px;
+  margin-top: 30px;
 
-// 3. CABECERA (Reducción de espacios)
-.main-header {
-  text-align: center; 
-  padding: 15px 0 5px; // Reducido para evitar el hueco visual
-  border-bottom: 2px solid $wp-black;
-
-  .header-logo {
-    max-width: 350px;
-    margin: 0 auto;
-  }
-
-  .tagline {
-    font-family: 'Playfair Display', serif; // Fuente 2
-    font-size: 1.2rem;
-    font-weight: 900;
-    font-style: italic;
-    color: $brand-purple;
-    margin-top: -8px; // Pega la frase al logo
-    letter-spacing: -0.5px;
+  @media (max-width: 850px) {
+    grid-template-columns: 1fr; // En móviles se vuelve una sola columna
   }
 }
 
-// 4. NAVEGACIÓN
-.main-nav {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  padding: 15px 0;
-  border-bottom: 1px solid #eee;
-  font-weight: 700;
-  text-transform: uppercase;
-  font-size: 0.8rem;
-  
-  a { 
-    text-decoration: none; color: $wp-black; 
-    &:hover { color: $brand-purple; border-bottom: 2px solid $brand-yellow; }
-  }
-}
-
-// 5. CONTENIDO (Normalización Tipográfica)
-.post-content {
-  max-width: 750px;
-  margin: 0 auto;
-  font-size: 1.1rem;
-
-  h1, h2, h3 { font-family: 'Playfair Display', serif; margin-top: 1.5rem; }
-  
-  // Arreglo para la imagen gigante
-  .medium-image {
-    max-width: 500px !important;
-    width: 100%;
-    margin: 2rem auto !important;
-    display: block;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-  }
-
-  // Estilo de Tabla (Para que se vea profesional)
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 2rem 0;
-    th { background: #f9f9f9; padding: 10px; border-bottom: 2px solid $wp-black; text-align: left; }
-    td { padding: 10px; border-bottom: 1px solid #eee; }
-  }
-}
-
-// 6. ESTILO CACAREO (WhatsApp Style)
-.cacareo-container {
+// =========================================
+// 2. EL SIDEBAR DE CACAREOS (CAJA DERECHA)
+// =========================================
+.home-sidebar {
   background: #fdfdfd;
-  border-left: 6px solid #25D366;
   padding: 25px;
   border-radius: 4px;
-  margin: 2rem 0;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  
-  h3 { color: #128C7E; font-family: 'Inter', sans-serif; font-weight: 800; }
+  border: 1px solid #eee;
+  border-top: 4px solid #63055d; // Morado de identidad
+  height: fit-content;
+
+  .sidebar-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    color: #63055d;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ffcc29; // Amarillo
+    padding-bottom: 10px;
+  }
+
+  .sidebar-card {
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+    
+    .meta {
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: #666;
+      text-transform: uppercase;
+    }
+    
+    h4 {
+      font-size: 1rem;
+      margin: 5px 0 0;
+      line-height: 1.3;
+      a { text-decoration: none; color: #111; &:hover { color: #63055d; } }
+    }
+  }
 }
 
-// 7. FOOTER UNIFICADO (Elimina la duplicidad)
-.main-footer {
-  margin-top: 50px;
-  padding: 30px 0;
-  border-top: 1px solid $wp-black;
-  text-align: center;
-  font-size: 0.9rem;
-  
-  .footer-quote { font-family: 'Playfair Display', serif; font-style: italic; color: $brand-purple; }
+// =========================================
+// 3. RESTAURACIÓN DE INDICADORES (CIFRAS)
+// =========================================
+.data-dashboard {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 30px 0;
+
+  .data-card {
+    flex: 1 1 45%; // Dos tarjetas por fila
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #eee;
+    border-top: 3px solid #ffcc29;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+
+    h4 { font-size: 0.8rem; text-transform: uppercase; color: #666; margin-bottom: 10px; }
+    .data-value { 
+      font-family: 'Playfair Display', serif; 
+      font-size: 2.8rem; 
+      color: #63055d; 
+      font-weight: 900;
+    }
+    p { font-size: 0.85rem; color: #444; }
+  }
 }
