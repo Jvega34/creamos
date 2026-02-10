@@ -4,41 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }} | Creamos</title>
-    
-    <link rel="icon" type="image/png" href="/favicon.png">
-    <link rel="apple-touch-icon" href="/favicon.png">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;700&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="/assets/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
 </head>
 <body>
-
     <div class="site-container">
         <header class="main-header">
-            <div class="date-bar">
-                {% assign date_format = "now" | date: "%A, %e de %B de %Y" %}
-                {{ date_format | 
-                    replace: "Monday", "Lunes" | replace: "Tuesday", "Martes" | 
-                    replace: "Wednesday", "Miércoles" | replace: "Thursday", "Jueves" | 
-                    replace: "Friday", "Viernes" | replace: "Saturday", "Sábado" | 
-                    replace: "Sunday", "Domingo" | replace: "January", "Enero" | 
-                    replace: "February", "Febrero" | replace: "March", "Marzo" | 
-                    replace: "April", "Abril" | replace: "May", "Mayo" | 
-                    replace: "June", "Junio" | replace: "July", "Julio" | 
-                    replace: "August", "Agosto" | replace: "September", "Septiembre" | 
-                    replace: "October", "Octubre" | replace: "November", "Noviembre" | 
-                    replace: "December", "Diciembre" 
-                }}
-            </div>
-            
-            <a href="/" class="logo-link">
+            <a href="/">
                 <img src="/assets/img/fondoClaro.png" alt="Logo Creamos" class="header-logo">
             </a>
-            
-            <p class="tagline">¡Creer, crear poder popular!</p>
+            <p class="tagline">Análisis Político para la Soberanía y la Libertad</p>
         </header>
 
         <nav class="main-nav">
@@ -49,23 +24,13 @@
         </nav>
 
         <main class="content-area">
-            <article class="main-article post-content">
-                {{ content }}
-            </article>
+            {{ content }}
         </main>
 
         <footer class="main-footer">
-            <hr class="light-divider">
-            <div class="footer-social">
-                <a href="https://instagram.com/creamoscolombia" target="_blank" class="social-link">Instagram</a> | 
-                <a href="https://x.com/creamos_co" target="_blank" class="social-link">X (Twitter)</a>
-            </div>
-            <p class="copyright">&copy; {{ "now" | date: "%Y" }} Creamos - Soberanía y Libertad</p>
-            <p class="footer-quote">
-                "¡Que no se apague la esperanza. De nuevo amanece, y el gallo vuelve a cantar!"
-            </p>
+            <p>&copy; 2026 Creamos - Soberanía y Libertad</p>
+            <p style="font-family: 'Playfair Display', serif; font-style: italic;">"¡Que no se apague la esperanza. De nuevo amanece, y el gallo vuelve a cantar!"</p>
         </footer>
     </div>
-
 </body>
 </html>
