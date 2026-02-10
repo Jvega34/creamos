@@ -1,269 +1,106 @@
 ---
 ---
 
-// 1. VARIABLES
+// 1. VARIABLES Y COLORES
 $brand-purple: #63055d; 
 $brand-yellow: #ffcc29; 
 $wp-black: #111111;
 $wp-grey: #666666;
-$border-light: #e2e2e2;
 $bg-white: #ffffff;
 
-// 2. BASE
+// 2. BASE (Fuente: Inter)
 body {
   font-family: 'Inter', sans-serif;
   color: $wp-black;
-  margin: 0;
-  padding: 0;
+  line-height: 1.6;
   background-color: $bg-white;
-  -webkit-font-smoothing: antialiased;
 }
 
-.site-container {
-  max-width: 1150px;
-  margin: 0 auto;
-  padding: 0 20px;
-  
-  @media (max-width: 600px) {
-    padding: 0 15px;
-  }
-}
-
-// 3. CABECERA
+// 3. CABECERA (Reducción de espacios)
 .main-header {
   text-align: center; 
-  padding: 30px 0 10px;
+  padding: 15px 0 5px; // Reducido para evitar el hueco visual
   border-bottom: 2px solid $wp-black;
 
-  .date-bar {
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    font-weight: 700;
-    margin-bottom: 15px;
-  }
-
-  .logo-link {
-    text-decoration: none;
-    display: inline-block;
-    margin: 5px auto 0;
-  }
-
   .header-logo {
-    display: block;
+    max-width: 350px;
     margin: 0 auto;
-    max-width: 400px; 
-    height: auto;
-    
-    @media (max-width: 600px) {
-      max-width: 280px; 
-    }
   }
 
   .tagline {
-    font-size: 0.95rem;
+    font-family: 'Playfair Display', serif; // Fuente 2
+    font-size: 1.2rem;
+    font-weight: 900;
     font-style: italic;
-    color: $wp-grey;
-    margin-top: 5px;
-    font-family: 'Playfair Display', serif;
+    color: $brand-purple;
+    margin-top: -8px; // Pega la frase al logo
+    letter-spacing: -0.5px;
   }
 }
 
 // 4. NAVEGACIÓN
 .main-nav {
-  border-bottom: 1px solid $border-light;
-  padding: 15px 0;
-  text-align: center;
-  margin-bottom: 40px;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
-  gap: 25px;
-
-  @media (max-width: 600px) {
-    gap: 15px;
-    padding: 12px 0;
-    margin-bottom: 25px;
-  }
-
-  a {
-    text-decoration: none;
-    color: $wp-black;
-    font-weight: 700;
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    
-    &:hover {
-      color: $brand-purple;
-      border-bottom: 2px solid $brand-yellow;
-    }
+  gap: 20px;
+  padding: 15px 0;
+  border-bottom: 1px solid #eee;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  
+  a { 
+    text-decoration: none; color: $wp-black; 
+    &:hover { color: $brand-purple; border-bottom: 2px solid $brand-yellow; }
   }
 }
 
-// 5. ESTRUCTURA DE CONTENIDO
-.content-area {
-  max-width: 780px; 
+// 5. CONTENIDO (Normalización Tipográfica)
+.post-content {
+  max-width: 750px;
   margin: 0 auto;
-}
+  font-size: 1.1rem;
 
-// Estilos compartidos para artículos y páginas (post-content)
-.main-article, .post-content {
-  font-size: 1.15rem;
-  line-height: 1.8;
-  color: #222;
-
-  blockquote {
-    border-left: 5px solid $brand-yellow;
-    margin: 2rem 0;
-    padding: 10px 20px;
-    background: #fdfdfd;
-    font-style: italic;
-    font-family: 'Playfair Display', serif;
-  }
-
-  // Estilo para tablas de datos (Rigor Numérico)
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 2.5rem 0;
-    font-size: 0.95rem;
-    
-    th { 
-      background: #f4f4f4; 
-      padding: 12px; 
-      text-align: left; 
-      border-bottom: 2px solid $wp-black;
-    }
-    
-    td { 
-      padding: 12px; 
-      border-bottom: 1px solid $border-light; 
-    }
-  }
-
-  // Imágenes estándar
-  img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 2rem auto;
-    border-radius: 4px;
-  }
-
-  // Clase específica para imágenes medianas (como la de Quiénes Somos)
+  h1, h2, h3 { font-family: 'Playfair Display', serif; margin-top: 1.5rem; }
+  
+  // Arreglo para la imagen gigante
   .medium-image {
     max-width: 500px !important;
     width: 100%;
     margin: 2rem auto !important;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    display: block;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
   }
 
-  figure {
-    margin: 2.5rem 0;
-    text-align: center;
-    
-    figcaption {
-      margin-top: 10px;
-      font-size: 0.9rem;
-      color: $wp-grey;
-      font-style: italic;
-    }
-  }
-
-  .video-container {
-    position: relative;
-    padding-bottom: 56.25%; 
-    height: 0;
-    overflow: hidden;
-    margin: 2.5rem 0;
-    iframe {
-      position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;
-    }
+  // Estilo de Tabla (Para que se vea profesional)
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    th { background: #f9f9f9; padding: 10px; border-bottom: 2px solid $wp-black; text-align: left; }
+    td { padding: 10px; border-bottom: 1px solid #eee; }
   }
 }
 
-// 6. PORTADA (INDEX)
-.featured-story {
-  margin-bottom: 30px;
-  .section-label {
-    color: $brand-purple;
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: 0.75rem;
-    margin-bottom: 10px;
-  }
-  .main-headline {
-    font-family: 'Playfair Display', serif;
-    font-size: 3rem;
-    line-height: 1.1;
-    margin: 0 0 20px 0;
-    a { text-decoration: none; color: inherit; &:hover { color: $brand-purple; } }
-  }
-  .lead-text { font-size: 1.25rem; color: $wp-grey; margin-bottom: 20px; }
+// 6. ESTILO CACAREO (WhatsApp Style)
+.cacareo-container {
+  background: #fdfdfd;
+  border-left: 6px solid #25D366;
+  padding: 25px;
+  border-radius: 4px;
+  margin: 2rem 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  
+  h3 { color: #128C7E; font-family: 'Inter', sans-serif; font-weight: 800; }
 }
 
-.data-dashboard {
-  margin: 40px 0;
-  .data-card {
-    background: #fdfdfd;
-    padding: 25px;
-    border: 1px solid $border-light;
-    border-top: 4px solid $brand-yellow;
-    text-align: center;
-    flex: 1;
-    min-width: 220px;
-    transition: transform 0.3s ease;
-    &:hover { transform: translateY(-5px); box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
-
-    h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.8rem;
-      color: $brand-purple;
-      margin: 10px 0;
-      span { font-size: 1rem; color: $wp-grey; margin-left: 5px; }
-    }
-    p { font-size: 0.85rem; color: $wp-grey; line-height: 1.4; }
-    .badge { background: $brand-yellow; font-size: 0.65rem; font-weight: 700; padding: 2px 5px; }
-  }
-}
-
-.social-bar {
-  display: flex; gap: 15px; align-items: center; margin-top: 20px;
-  .social-icon {
-    color: $brand-purple; text-decoration: none; border: 1px solid $brand-purple;
-    padding: 5px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 700;
-    &:hover { background: $brand-purple; color: $bg-white; }
-  }
-}
-
-// 7. ELEMENTOS GRÁFICOS
-.double-divider { border: 0; border-top: 4px double $wp-black; margin: 40px 0; }
-.light-divider { border: 0; border-top: 1px solid $border-light; margin: 30px 0; }
-
-.home-grid { display: flex; gap: 40px; flex-wrap: wrap; }
-.column-title {
-  font-family: 'Playfair Display', serif;
-  border-bottom: 1px solid $wp-black;
-  padding-bottom: 5px; margin-bottom: 20px;
-  text-transform: uppercase; font-size: 0.9rem; width: 100%;
-}
-
-.home-quote {
-  font-family: 'Playfair Display', serif;
-  font-style: italic; font-size: 1.1rem;
-  color: $brand-purple; border-left: 3px solid $brand-purple;
-  padding-left: 15px; margin: 20px 0;
-}
-
-// 8. FOOTER
+// 7. FOOTER UNIFICADO (Elimina la duplicidad)
 .main-footer {
-  margin-top: 60px;
-  padding: 40px 0;
+  margin-top: 50px;
+  padding: 30px 0;
   border-top: 1px solid $wp-black;
   text-align: center;
-  .social-link {
-    color: $brand-purple; text-decoration: none; font-weight: 700;
-    &:hover { color: $brand-yellow; }
-  }
+  font-size: 0.9rem;
+  
+  .footer-quote { font-family: 'Playfair Display', serif; font-style: italic; color: $brand-purple; }
 }
