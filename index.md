@@ -3,58 +3,52 @@ layout: default
 title: Inicio
 ---
 
-{% assign latest_post = site.posts.first %}
-<section class="featured-story">
-  <p class="section-label">Análisis Destacado</p>
-  <h1 class="main-headline">
-    <a href="{{ latest_post.url }}" style="text-decoration:none; color:inherit;">{{ latest_post.title }}</a>
-  </h1>
-  <p class="lead-text">{{ latest_post.description }}</p>
-  <a href="{{ latest_post.url }}" class="read-more-link">Leer investigación completa →</a>
-</section>
+<div class="home-grid-layout">
 
-<hr class="double-divider">
+  <div class="home-main-column">
+    
+    <section class="featured-story">
+      <p class="section-label">Análisis de Coyuntura</p>
+      <h1 class="main-headline">Soberanía en Tiempos de Crisis: El Reto Nacional</h1>
+      <p class="lead-text">
+        Nuestra apuesta no es técnica, es política. La libertad de la nación depende de nuestra capacidad para decidir sobre nuestros recursos y nuestra tecnología.
+      </p>
+      <a href="/coyuntura" class="read-more">Leer investigación completa →</a>
+    </section>
 
-<section class="data-dashboard">
-  <div class="column-title">Pulso de la Nación (Cifras Clave)</div>
-  <div class="home-grid">
-    <div class="data-card">
-      <span class="badge">TRABAJO</span>
-      <h3>55%</h3>
-      <p>Tasa de informalidad laboral en Colombia al cierre de 2025.</p>
-    </div>
-    <div class="data-card">
-      <span class="badge">SALUD</span>
-      <h3>2.5 min</h3>
-      <p>Frecuencia con la que se radica una tutela por derecho a la salud.</p>
-    </div>
-    <div class="data-card">
-      <span class="badge">AMBIENTE</span>
-      <h3>2.8x</h3>
-      <p>Calidad del aire por encima del límite de la OMS.</p>
-    </div>
+    <hr class="double-divider">
+
+    <section>
+      <h3 class="column-title">Pulso de la Nación (Cifras)</h3>
+      <div class="data-dashboard">
+        <div class="data-card">
+          <h4>Soberanía Alimentaria</h4>
+          <div class="data-value">55<span>%</span></div>
+          <p>De los alimentos básicos en Colombia siguen siendo importados.</p>
+        </div>
+        <div class="data-card">
+          <h4>Acceso Digital</h4>
+          <div class="data-value">2.5<span>min</span></div>
+          <p>Es el tiempo promedio de carga en zonas rurales del país.</p>
+        </div>
+      </div>
+    </section>
+
   </div>
-</section>
 
-<hr class="double-divider">
+  <aside class="home-sidebar">
+    <h3 class="sidebar-title">📢 Últimos Cacareos</h3>
 
-<section class="recent-feed">
-  <div class="column-title">Últimas Investigaciones</div>
-  <div class="home-grid">
-    {% for post in site.posts offset:1 limit:2 %}
-    <div class="feed-column">
-      <article class="feed-item-small">
-        <span class="post-category" style="font-size: 0.6rem;">{{ post.category | capitalize }}</span>
-        <h2 class="feed-title-small">
-          <a href="{{ post.url }}">{{ post.title }}</a>
-        </h2>
-        <p class="feed-excerpt-small">{{ post.description | truncate: 120 }}</p>
-      </article>
-    </div>
+    {% for post in site.cacareos limit:5 %}
+      <div class="sidebar-card">
+        <div class="meta">#{{ post.number }} | {{ post.date | date: "%d/%m" }}</div>
+        <h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
+      </div>
     {% endfor %}
-  </div>
-</section>
 
-<div class="home-quote" style="text-align: center; border-left: none; border-top: 1px solid #63055d; padding-top: 20px;">
-  "¡Que no se apague la esperanza. De nuevo amanece, y el gallo vuelve a cantar!"
+    <div style="margin-top: 20px; text-align: center;">
+      <a href="/cacareos" style="font-size: 0.8rem; font-weight: 700; color: #63055d; text-decoration: none;">Ver historial completo →</a>
+    </div>
+  </aside>
+
 </div>
