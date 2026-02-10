@@ -3,8 +3,8 @@ description: >-
   Difusión de ideas políticas y análisis técnico. 
   Transformando datos en visión país desde el rigor numérico.
 email: johan.rvega34@gmail.com
+url: "https://creamoscolombia.org"
 baseurl: ""
-url: "https://creamos-8d28e.web.app"
 logo: "/assets/img/fondoClaro.png"
 
 # 1. AJUSTE DE TIEMPO (Crucial para que aparezcan los posts)
