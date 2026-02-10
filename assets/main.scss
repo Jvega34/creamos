@@ -1,87 +1,136 @@
 ---
 ---
 
-// (Mantén tus variables arriba: $brand-purple, $brand-yellow, etc.)
+// 1. VARIABLES
+$brand-purple: #63055d; 
+$brand-yellow: #ffcc29; 
+$wp-black: #111111;
+$wp-grey: #666;
 
-// =========================================
-// 1. EL GRID DE LA PORTADA (2 COLUMNAS)
-// =========================================
+// 2. BASE
+body {
+  font-family: 'Inter', sans-serif;
+  color: $wp-black;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.site-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+// 3. CABECERA (Arreglo del Logo Gigante)
+.main-header {
+  text-align: center;
+  padding: 20px 0 10px;
+  border-bottom: 2px solid $wp-black;
+
+  .header-logo {
+    display: block;
+    margin: 0 auto;
+    max-width: 320px; // LIMITA EL TAMAÑO AQUÍ
+    height: auto;
+  }
+
+  .tagline {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    font-style: italic;
+    color: $brand-purple;
+    margin: 5px 0 0;
+  }
+}
+
+// 4. NAVEGACIÓN
+.main-nav {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  padding: 15px 0;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 30px;
+
+  a {
+    text-decoration: none;
+    color: $wp-black;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    &:hover { color: $brand-purple; }
+  }
+}
+
+// 5. GRID DE PORTADA (2 Columnas reales)
 .home-grid-layout {
   display: grid;
-  grid-template-columns: 2fr 1fr; // Columna principal (2 partes) y Sidebar (1 parte)
-  gap: 40px;
-  margin-top: 30px;
+  grid-template-columns: 2fr 350px; // Columna principal y sidebar fijo
+  gap: 50px;
+  align-items: start;
 
-  @media (max-width: 850px) {
-    grid-template-columns: 1fr; // En móviles se vuelve una sola columna
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
   }
 }
 
-// =========================================
-// 2. EL SIDEBAR DE CACAREOS (CAJA DERECHA)
-// =========================================
-.home-sidebar {
-  background: #fdfdfd;
-  padding: 25px;
-  border-radius: 4px;
-  border: 1px solid #eee;
-  border-top: 4px solid #63055d; // Morado de identidad
-  height: fit-content;
-
-  .sidebar-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.3rem;
-    color: #63055d;
-    margin-bottom: 20px;
-    border-bottom: 2px solid #ffcc29; // Amarillo
-    padding-bottom: 10px;
-  }
-
-  .sidebar-card {
-    padding: 12px 0;
-    border-bottom: 1px solid #eee;
-    
-    .meta {
-      font-size: 0.7rem;
-      font-weight: 700;
-      color: #666;
-      text-transform: uppercase;
-    }
-    
-    h4 {
-      font-size: 1rem;
-      margin: 5px 0 0;
-      line-height: 1.3;
-      a { text-decoration: none; color: #111; &:hover { color: #63055d; } }
-    }
-  }
-}
-
-// =========================================
-// 3. RESTAURACIÓN DE INDICADORES (CIFRAS)
-// =========================================
+// 6. INDICADORES (Restauración de Tarjetas)
 .data-dashboard {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 20px;
   margin: 30px 0;
 
   .data-card {
-    flex: 1 1 45%; // Dos tarjetas por fila
     background: #fff;
-    padding: 20px;
+    padding: 25px;
     border: 1px solid #eee;
-    border-top: 3px solid #ffcc29;
+    border-top: 5px solid $brand-yellow;
     text-align: center;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 
-    h4 { font-size: 0.8rem; text-transform: uppercase; color: #666; margin-bottom: 10px; }
+    h4 { font-size: 0.8rem; text-transform: uppercase; margin-bottom: 10px; color: $wp-grey; }
     .data-value { 
       font-family: 'Playfair Display', serif; 
-      font-size: 2.8rem; 
-      color: #63055d; 
+      font-size: 3rem; 
+      color: $brand-purple; 
       font-weight: 900;
+      line-height: 1;
     }
-    p { font-size: 0.85rem; color: #444; }
   }
+}
+
+// 7. SIDEBAR (Caja de Cacareos)
+.home-sidebar {
+  background: #fdfdfd;
+  padding: 25px;
+  border: 1px solid #eee;
+  border-top: 5px solid $brand-purple;
+  position: sticky;
+  top: 20px;
+
+  .sidebar-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    color: $brand-purple;
+    border-bottom: 2px solid $brand-yellow;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+  }
+
+  .sidebar-card {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    h4 { margin: 5px 0 0; font-size: 1rem; a { text-decoration: none; color: #111; } }
+  }
+}
+
+// 8. FOOTER ÚNICO
+.main-footer {
+  margin-top: 60px;
+  padding: 40px 0;
+  border-top: 1px solid $wp-black;
+  text-align: center;
+  font-size: 0.9rem;
 }
