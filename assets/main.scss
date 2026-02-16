@@ -21,7 +21,7 @@ body {
   padding: 0 20px;
 }
 
-// 3. CABECERA (Arreglo del Logo Gigante)
+// 3. CABECERA (Logo con límite de tamaño)
 .main-header {
   text-align: center;
   padding: 20px 0 10px;
@@ -30,7 +30,7 @@ body {
   .header-logo {
     display: block;
     margin: 0 auto;
-    max-width: 320px; // LIMITA EL TAMAÑO AQUÍ
+    max-width: 320px; 
     height: auto;
   }
 
@@ -43,29 +43,65 @@ body {
   }
 }
 
-// 4. NAVEGACIÓN
+// 4. NAVEGACIÓN (CON DROPDOWN ESCALABLE)
 .main-nav {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 25px;
   padding: 15px 0;
   border-bottom: 1px solid #eee;
   margin-bottom: 30px;
 
-  a {
+  a, .dropbtn {
     text-decoration: none;
     color: $wp-black;
     font-weight: 700;
     font-size: 0.85rem;
     text-transform: uppercase;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+    font-family: inherit;
     &:hover { color: $brand-purple; }
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #fff;
+      min-width: 220px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
+      z-index: 100;
+      border-top: 3px solid $brand-purple;
+      text-align: left;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 100%;
+
+      a {
+        color: $wp-black;
+        padding: 12px 16px;
+        text-transform: none; // Lectura natural para sub-categorías
+        display: block;
+        border-bottom: 1px solid #f4f4f4;
+        font-weight: 400;
+        &:hover { background-color: rgba($brand-yellow, 0.1); color: $brand-purple; }
+      }
+    }
+    &:hover .dropdown-content { display: block; }
   }
 }
 
-// 5. GRID DE PORTADA (2 Columnas reales)
+// 5. GRID DE PORTADA (2 Columnas)
 .home-grid-layout {
   display: grid;
-  grid-template-columns: 2fr 350px; // Columna principal y sidebar fijo
+  grid-template-columns: 2fr 350px; 
   gap: 50px;
   align-items: start;
 
@@ -74,7 +110,7 @@ body {
   }
 }
 
-// 6. INDICADORES (Restauración de Tarjetas)
+// 6. INDICADORES (Data Dashboard)
 .data-dashboard {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -100,7 +136,7 @@ body {
   }
 }
 
-// 7. SIDEBAR (Caja de Cacareos)
+// 7. SIDEBAR (Feed de Cacareos)
 .home-sidebar {
   background: #fdfdfd;
   padding: 25px;
@@ -126,7 +162,7 @@ body {
   }
 }
 
-// 8. FOOTER ÚNICO
+// 8. FOOTER
 .main-footer {
   margin-top: 60px;
   padding: 40px 0;
@@ -134,73 +170,61 @@ body {
   text-align: center;
   font-size: 0.9rem;
 }
-// =========================================
-// CONTROL TOTAL DE IMÁGENES
-// =========================================
 
-// 1. Regla Global: Nada se desborda jamás
+// 9. CONTROL DE IMÁGENES
 img {
   max-width: 100%;
   height: auto;
 }
 
-// 2. Control dentro de las páginas de contenido (Posts y Quiénes Somos)
 .content-area, .post-content {
-  
   img {
     display: block;
-    margin: 2.5rem auto; // Las centra y les da aire
+    margin: 2.5rem auto; 
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.08);
   }
 
-  // Clase específica para la foto de "Nosotros"
-  // Ajusta el max-width a tu gusto (500px a 600px suele ser lo ideal)
   .medium-image {
     max-width: 550px !important; 
     width: 100%;
-    border: 3px solid #eee; // Un pequeño marco elegante
+    border: 3px solid #eee; 
   }
 }
 
-// 3. Miniaturas en el Sidebar (Si llegamos a poner fotos ahí)
 .home-sidebar img {
   margin: 10px 0;
   border-radius: 4px;
 }
-// =========================================
-// ESTILO ESPECIAL PARA CACAREOS (BURBUJA)
-// =========================================
 
-.post-content {
-  // Si el post tiene el título "CACAREO", aplicamos este estilo
-  h1:contains("CACAREO"), 
-  & {
+// 10. ESTILO ESPECIAL PARA CACAREOS (Burbuja Institucional)
+// Usamos .is-cacareo como clase de apoyo para mayor control
+.post-content.is-cacareo, 
+.cacareos-archive-list article {
     background: #fdfdfd;
     padding: 30px;
-    border-left: 8px solid #25D366; // El verde de WhatsApp para identidad de red
+    border-left: 8px solid $brand-purple; // Cambiado de verde a Morado Creamos
     border-radius: 4px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.05);
     line-height: 1.8;
     max-width: 800px;
-    margin: 0 auto;
+    margin: 2rem auto;
 
     h1, h2, h3 {
-      color: #128C7E; // Verde oscuro tipo chat
-      font-family: 'Inter', sans-serif;
-      font-weight: 800;
+      color: $brand-purple;
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
     }
 
     strong {
-      color: $brand-purple; // Mantenemos nuestra identidad morada en las negritas
+      color: darken($brand-purple, 10%);
+      background: rgba($brand-yellow, 0.15); // Resaltado sutil amarillo
+      padding: 0 4px;
+      border-radius: 2px;
     }
-  }
 }
 
-// =========================================
-// ESTILOS PARA PÁGINAS DE CONTENIDO Y "NOSOTROS"
-// =========================================
-
+// 11. PÁGINAS DE CONTENIDO Y "NOSOTROS"
 .category-header {
   text-align: center;
   margin-bottom: 40px;
@@ -229,7 +253,6 @@ img {
   }
 }
 
-// Divisores
 .double-divider {
   border: 0;
   border-top: 4px double $brand-yellow;
@@ -242,7 +265,6 @@ img {
   margin: 30px 0;
 }
 
-// Citas y Destacados
 .home-quote {
   font-family: 'Playfair Display', serif;
   font-size: 1.8rem;
@@ -265,7 +287,7 @@ img {
   }
 }
 
-// Estilo de Tablas (Identidad Política)
+// 12. TABLAS PROFESIONALES (Fix para Nosotros)
 table {
   width: 100%;
   border-collapse: collapse;
@@ -282,7 +304,7 @@ table {
 
   td {
     padding: 15px;
-    border-bottom: 1px solid #eee;
+    border: 1px solid #eee;
     vertical-align: top;
     line-height: 1.4;
   }
@@ -292,7 +314,6 @@ table {
   }
 }
 
-// Texto Lead
 .lead-text {
   font-size: 1.2rem;
   line-height: 1.8;
