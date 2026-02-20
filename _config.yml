@@ -24,6 +24,9 @@ collections:
   cacareos:
     output: true
     permalink: /cacareos/:title/
+  notas: # Colección para Notas, Crónicas y Opinión
+    output: true
+    permalink: /notas/:title/
 
 # 4. VALORES POR DEFECTO
 defaults:
@@ -35,6 +38,11 @@ defaults:
   - scope:
       path: ""
       type: "cacareos" # Asigna el layout automáticamente a los cacareos
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "notas"
     values:
       layout: "post"
 
