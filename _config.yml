@@ -10,6 +10,9 @@ url: "https://creamoscolombia.org"
 baseurl: ""
 logo: "/assets/img/fondoClaro.png"
 
+# Google Tag Manager Configuration
+gtm_id: GTM-PLR2STVP
+
 # 1. AJUSTES DE TIEMPO
 # Crucial para que los posts del mismo día aparezcan de inmediato
 timezone: America/Bogota
