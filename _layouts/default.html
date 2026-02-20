@@ -16,12 +16,18 @@
             <p class="tagline">¡Creer, crear poder popular!</p>
         </header>
 
-        <nav class="main-nav">
-            <a href="/">Inicio</a>
-            <a href="/coyuntura">Coyuntura</a>
-            <a href="/cacareos">Cacareos</a>
-            <a href="/quienes-somos">Nosotros</a>
-        </nav>
+       <nav class="main-nav">
+    <a href="/">Inicio</a>
+    <div class="dropdown">
+        <a href="#" class="dropbtn">Publicaciones ▼</a>
+        <div class="dropdown-content">
+            <a href="/coyuntura">Análisis de Coyuntura</a>
+            <a href="/notas">Notas, Crónicas y Opinión</a>
+        </div>
+    </div>
+    <a href="/cacareos">Cacareos</a>
+    <a href="/quienes-somos">Nosotros</a>
+</nav>
 
         <main class="content-area">
             {{ content }}
