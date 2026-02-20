@@ -21,7 +21,7 @@ body {
   padding: 0 20px;
 }
 
-// 3. CABECERA (Logo con límite de tamaño)
+// 3. CABECERA
 .main-header {
   text-align: center;
   padding: 20px 0 10px;
@@ -43,11 +43,10 @@ body {
   }
 }
 
-// 4. NAVEGACIÓN (CON DROPDOWN ESCALABLE)
+// 4. NAVEGACIÓN (CON DROPDOWN)
 .main-nav {
   display: flex;
   justify-content: center;
-  align-items: center;
   gap: 25px;
   padding: 15px 0;
   border-bottom: 1px solid #eee;
@@ -59,18 +58,12 @@ body {
     font-weight: 700;
     font-size: 0.85rem;
     text-transform: uppercase;
-    cursor: pointer;
-    background: none;
-    border: none;
-    padding: 0;
-    font-family: inherit;
     &:hover { color: $brand-purple; }
   }
 
   .dropdown {
     position: relative;
     display: inline-block;
-    
     .dropdown-content {
       display: none;
       position: absolute;
@@ -79,272 +72,93 @@ body {
       box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
       z-index: 100;
       border-top: 3px solid $brand-purple;
-      text-align: left;
+      top: 100%;
       left: 50%;
       transform: translateX(-50%);
-      top: 100%;
-
       a {
-        color: $wp-black;
-        padding: 12px 16px;
-        text-transform: none; // Lectura natural para sub-categorías
-        display: block;
-        border-bottom: 1px solid #f4f4f4;
-        font-weight: 400;
-        &:hover { background-color: rgba($brand-yellow, 0.1); color: $brand-purple; }
+        color: $wp-black; padding: 12px 16px; text-transform: none; display: block;
+        &:hover { background-color: rgba($brand-yellow, 0.1); }
       }
     }
     &:hover .dropdown-content { display: block; }
   }
 }
 
-// 5. GRID DE PORTADA (2 Columnas)
+// 5. GRID DE PORTADA
 .home-grid-layout {
   display: grid;
   grid-template-columns: 2fr 350px; 
   gap: 50px;
-  align-items: start;
-
-  @media (max-width: 900px) {
-    grid-template-columns: 1fr;
-  }
+  @media (max-width: 900px) { grid-template-columns: 1fr; }
 }
 
-// 6. INDICADORES (Data Dashboard)
+// 6. INDICADORES (Dashboard)
 .data-dashboard {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
   margin: 30px 0;
-
   .data-card {
-    background: #fff;
-    padding: 25px;
-    border: 1px solid #eee;
-    border-top: 5px solid $brand-yellow;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-
-    h4 { font-size: 0.8rem; text-transform: uppercase; margin-bottom: 10px; color: $wp-grey; }
-    .data-value { 
-      font-family: 'Playfair Display', serif; 
-      font-size: 3rem; 
-      color: $brand-purple; 
-      font-weight: 900;
-      line-height: 1;
-    }
+    background: #fff; padding: 25px; border: 1px solid #eee; border-top: 5px solid $brand-yellow;
+    text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    .data-value { font-family: 'Playfair Display', serif; font-size: 3rem; color: $brand-purple; font-weight: 900; }
   }
 }
 
-// 7. SIDEBAR (Feed de Cacareos)
+// 7. SIDEBAR
 .home-sidebar {
-  background: #fdfdfd;
-  padding: 25px;
-  border: 1px solid #eee;
-  border-top: 5px solid $brand-purple;
-  position: sticky;
-  top: 20px;
-
-  .sidebar-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.4rem;
-    color: $brand-purple;
-    border-bottom: 2px solid $brand-yellow;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
-  }
-
-  .sidebar-card {
-    margin-bottom: 15px;
-    padding-bottom: 15px;
-    border-bottom: 1px solid #eee;
-    h4 { margin: 5px 0 0; font-size: 1rem; a { text-decoration: none; color: #111; } }
-  }
+  background: #fdfdfd; padding: 25px; border: 1px solid #eee; border-top: 5px solid $brand-purple;
+  position: sticky; top: 20px;
+  .sidebar-title { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: $brand-purple; border-bottom: 2px solid $brand-yellow; }
 }
 
 // 8. FOOTER
-.main-footer {
-  margin-top: 60px;
-  padding: 40px 0;
-  border-top: 1px solid $wp-black;
-  text-align: center;
-  font-size: 0.9rem;
-}
+.main-footer { margin-top: 60px; padding: 40px 0; border-top: 1px solid $wp-black; text-align: center; }
 
 // 9. CONTROL DE IMÁGENES
-img {
-  max-width: 100%;
-  height: auto;
-}
-
+img { max-width: 100%; height: auto; }
 .content-area, .post-content {
-  img {
-    display: block;
-    margin: 2.5rem auto; 
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-  }
-
-  .medium-image {
-    max-width: 550px !important; 
-    width: 100%;
-    border: 3px solid #eee; 
-  }
+  img { display: block; margin: 2.5rem auto; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); }
+  .medium-image { max-width: 550px !important; width: 100%; border: 3px solid #eee; }
 }
 
-.home-sidebar img {
-  margin: 10px 0;
-  border-radius: 4px;
+// 10. ESTILO CACAREOS (Burbuja Morada Institucional)
+.cacareo-bubble, .post-content.is-cacareo {
+    background: #fdfdfd; padding: 30px; border-left: 8px solid $brand-purple;
+    border-radius: 4px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    strong { color: $brand-purple; background: rgba($brand-yellow, 0.15); padding: 0 4px; }
 }
 
-// 10. ESTILO ESPECIAL PARA CACAREOS (Burbuja Institucional)
-// Usamos .is-cacareo como clase de apoyo para mayor control
-.post-content.is-cacareo, 
-.cacareos-archive-list article {
-    background: #fdfdfd;
-    padding: 30px;
-    border-left: 8px solid $brand-purple; // Cambiado de verde a Morado Creamos
-    border-radius: 4px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    line-height: 1.8;
-    max-width: 800px;
-    margin: 2rem auto;
-
-    h1, h2, h3 {
-      color: $brand-purple;
-      font-family: 'Playfair Display', serif;
-      font-weight: 700;
-    }
-
-    strong {
-      color: darken($brand-purple, 10%);
-      background: rgba($brand-yellow, 0.15); // Resaltado sutil amarillo
-      padding: 0 4px;
-      border-radius: 2px;
-    }
-}
-
-// 11. PÁGINAS DE CONTENIDO Y "NOSOTROS"
+// 11. PÁGINAS DE CONTENIDO (Nosotros / Categorías)
 .category-header {
-  text-align: center;
-  margin-bottom: 40px;
-  
-  .section-label {
-    color: $brand-purple;
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: 0.9rem;
-    margin-bottom: 10px;
-  }
-  
-  .category-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 3rem;
-    margin: 0;
-    line-height: 1.2;
-  }
-  
-  .category-description {
-    max-width: 700px;
-    margin: 15px auto 0;
-    color: $wp-grey;
-    font-style: italic;
-    font-size: 1.1rem;
-  }
+  text-align: center; margin-bottom: 40px;
+  .category-title { font-family: 'Playfair Display', serif; font-size: 3rem; }
 }
 
-.double-divider {
-  border: 0;
-  border-top: 4px double $brand-yellow;
-  margin: 40px 0;
-}
-
-.light-divider {
-  border: 0;
-  border-top: 1px solid #eee;
-  margin: 30px 0;
-}
-
-.home-quote {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.8rem;
-  font-style: italic;
-  color: $brand-purple;
-  text-align: center;
-  padding: 40px;
-  background: rgba($brand-yellow, 0.05);
-  border-radius: 8px;
-  margin: 40px 0;
-  position: relative;
-  
-  &::before {
-    content: '"';
-    font-size: 4rem;
-    position: absolute;
-    top: -10px;
-    left: 20px;
-    opacity: 0.2;
-  }
-}
-
-// 12. TABLAS PROFESIONALES (Fix para Nosotros)
+// 12. DIVISORES Y TABLAS
+.double-divider { border: 0; border-top: 4px double $brand-yellow; margin: 40px 0; }
 table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 30px 0;
-  font-size: 0.95rem;
-
-  th {
-    background-color: $brand-purple;
-    color: white;
-    text-align: left;
-    padding: 15px;
-    text-transform: uppercase;
-  }
-
-  td {
-    padding: 15px;
-    border: 1px solid #eee;
-    vertical-align: top;
-    line-height: 1.4;
-  }
-
-  tr:nth-child(even) {
-    background-color: #fcfcfc;
-  }
+  width: 100%; border-collapse: collapse; margin: 30px 0;
+  th { background-color: $brand-purple; color: white; padding: 15px; text-transform: uppercase; }
+  td { padding: 15px; border: 1px solid #eee; }
 }
 
-.lead-text {
-  font-size: 1.2rem;
-  line-height: 1.8;
-  color: #333;
-}
-// Detalles Editoriales para Crónicas y Notas
+// 13. DETALLES EDITORIALES (NUEVO)
 .notas-content {
-  // Letra Capital (Drop Cap)
   .drop-cap {
-    float: left;
-    font-family: 'Playfair Display', serif;
-    font-size: 5rem;
-    line-height: 4rem;
-    padding-top: 4px;
-    padding-right: 12px;
-    padding-left: 3px;
-    color: $brand-purple;
-    font-weight: 900;
+    float: left; font-family: 'Playfair Display', serif; font-size: 5rem;
+    line-height: 4rem; padding-top: 4px; padding-right: 12px; color: $brand-purple; font-weight: 900;
   }
 
-  // Frases llamativas (Pull Quotes)
   .pull-quote {
     font-family: 'Playfair Display', serif;
     font-size: 1.6rem;
     font-style: italic;
     color: $brand-purple;
-    border: none;
     text-align: center;
-    margin: 3rem 0;
-    padding: 2rem;
-    background-color: rgba($brand-yellow, 0.07);
+    margin: 4rem 0; // Aumentado para evitar colisión
+    padding: 3.5rem 2rem 2rem; // MÁS PADDING SUPERIOR para la comilla
+    background-color: rgba($brand-yellow, 0.05);
     position: relative;
     border-top: 2px solid $brand-yellow;
     border-bottom: 2px solid $brand-yellow;
@@ -353,20 +167,16 @@ table {
       content: '“';
       font-size: 4rem;
       position: absolute;
-      top: -20px;
+      top: -25px; // Ajustado
       left: 50%;
       transform: translateX(-50%);
-      background: #fff; // Para "romper" la línea del borde
+      background: #fff;
       padding: 0 15px;
       color: $brand-yellow;
+      line-height: 1;
     }
   }
-
-  h3 {
-    margin-top: 3rem;
-    color: $brand-purple;
-    font-family: 'Playfair Display', serif;
-    font-size: 1.8rem;
-    border-bottom: 1px solid #eee;
-  }
 }
+
+// 14. TEXTO LEAD
+.lead-text { font-size: 1.2rem; line-height: 1.8; color: #333; }
