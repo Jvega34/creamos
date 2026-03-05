@@ -7,8 +7,8 @@ description: "Canal seguro y 100% anónimo para reportar irregularidades elector
 
 <div class="post-content is-cacareo" markdown="1">
 
-### 🛡️ Protege la Democracia con Evidencia Real
-Este portal permite reportar irregularidades de forma **estrictamente anónima**. Si te es posible, puedes adjuntar fotos o videos cortos para respaldar tu denuncia. Los datos se almacenan en la infraestructura privada de **Creamos**.
+### 🛡️ Tu reporte es vital para la democracia
+Este canal es **totalmente anónimo**. No rastreamos tu identidad. La información y evidencia multimedia viajan directamente a los servidores de **Creamos** bajo estrictos protocolos de seguridad.
 
 <div class="denuncia-wrapper" style="background: #f9f9f9; padding: 2rem; border-radius: 8px; border: 1px solid #eee; margin: 2rem 0;">
   
@@ -27,21 +27,20 @@ Este portal permite reportar irregularidades de forma **estrictamente anónima**
 
     <div style="margin-bottom: 1.5rem;">
       <label style="display: block; font-weight: bold; margin-bottom: 0.5rem; font-family: 'Inter', sans-serif;">Ubicación (Municipio y Puesto de Votación)</label>
-      <input type="text" id="ubicacion" placeholder="Ej: Bogotá - Corferias" required style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem;">
+      <input type="text" id="ubicacion" placeholder="Ej: Bogotá - Unicentro" required style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem;">
     </div>
 
     <div style="margin-bottom: 1.5rem;">
-      <label style="display: block; font-weight: bold; margin-bottom: 0.5rem; font-family: 'Inter', sans-serif;">Descripción de los hechos</label>
-      <textarea id="descripcion" rows="4" placeholder="Describe lo sucedido..." required style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem; font-family: 'Inter', sans-serif;"></textarea>
+      <label style="display: block; font-weight: bold; margin-bottom: 0.5rem; font-family: 'Inter', sans-serif;">Descripción de lo sucedido</label>
+      <textarea id="descripcion" rows="4" placeholder="Describe los hechos..." required style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem; font-family: 'Inter', sans-serif;"></textarea>
     </div>
 
-    <div style="margin-bottom: 1.5rem;">
-      <label style="display: block; font-weight: bold; margin-bottom: 0.5rem; font-family: 'Inter', sans-serif;">Adjuntar Evidencia (Opcional - Máx 10MB)</label>
-      <input type="file" id="archivo" accept="image/*,video/*" style="width: 100%; padding: 10px; background: #fff; border: 1px dashed #63055d; border-radius: 4px;">
-      <small style="color: #666;">Formatos permitidos: JPG, PNG, MP4. Máximo 10MB.</small>
+    <div style="margin-bottom: 2rem;">
+      <label style="display: block; font-weight: bold; margin-bottom: 0.5rem; font-family: 'Inter', sans-serif;">Adjuntar Foto o Video (Opcional - Máx 10MB)</label>
+      <input type="file" id="archivo" accept="image/*,video/*" style="width: 100%; padding: 10px; border: 1px dashed #63055d; border-radius: 4px; background: #fff;">
     </div>
 
-    <button type="submit" id="btnEnviar" style="background: #63055d; color: white; padding: 15px 40px; border: none; border-radius: 4px; cursor: pointer; font-weight: bold; font-size: 1.1rem; width: 100%; transition: background 0.3s;">
+    <button type="submit" id="btnEnviar" style="background: #63055d; color: white; padding: 15px 40px; border: none; border-radius: 4px; cursor: pointer; font-weight: bold; font-size: 1.1rem; width: 100%;">
       ENVIAR REPORTE ANÓNIMO
     </button>
   </form>
@@ -49,13 +48,6 @@ Este portal permite reportar irregularidades de forma **estrictamente anónima**
   <div id="statusMessage" style="display:none; margin-top: 2rem; padding: 20px; border-radius: 4px; text-align: center; font-weight: bold; font-family: 'Playfair Display', serif;">
   </div>
 </div>
-
----
-
-### Seguridad y Privacidad
-1. **Anonimato de Archivos:** Al subir fotos, el sistema las procesa para romper vínculos con tu dispositivo.
-2. **Uso de Datos:** La evidencia será analizada exclusivamente para el control social de la jornada electoral del 8 de marzo.
-3. **Recomendación:** Si estás en un lugar con poca señal, evita subir videos pesados para asegurar que el reporte de texto llegue correctamente.
 
 </div>
 
@@ -66,21 +58,16 @@ document.getElementById('denunciaForm').addEventListener('submit', async (e) => 
   const btn = document.getElementById('btnEnviar');
   const status = document.getElementById('statusMessage');
   const fileInput = document.getElementById('archivo');
-  
-  // URL de tu función en la región de México
   const endpoint = 'https://denuncias-electorales-creamos-493669349431.northamerica-south1.run.app';
 
-  // Validación de tamaño de archivo (10MB)
   if (fileInput.files.length > 0 && fileInput.files[0].size > 10 * 1024 * 1024) {
-    alert('El archivo supera el límite de 10MB. Por favor sube uno más liviano.');
+    alert('El archivo es demasiado grande (máximo 10MB).');
     return;
   }
 
-  btn.innerText = 'SUBIENDO EVIDENCIA...';
+  btn.innerText = 'ENVIANDO REPORTE...';
   btn.disabled = true;
-  btn.style.opacity = '0.7';
 
-  // Usamos FormData para permitir el envío del archivo multimedia
   const formData = new FormData();
   formData.append('tipo', document.getElementById('tipo').value);
   formData.append('ubicacion', document.getElementById('ubicacion').value);
@@ -93,7 +80,8 @@ document.getElementById('denunciaForm').addEventListener('submit', async (e) => 
   try {
     const response = await fetch(endpoint, {
       method: 'POST',
-      body: formData // No necesita headers de Content-Type, el navegador los pone automáticamente para FormData
+      mode: 'cors',
+      body: formData
     });
 
     if (response.ok) {
@@ -101,24 +89,18 @@ document.getElementById('denunciaForm').addEventListener('submit', async (e) => 
       status.style.display = 'block';
       status.style.background = '#ffcc29';
       status.style.color = '#63055d';
-      status.innerText = '¡Denuncia y evidencia recibidas con éxito! Gracias por proteger la transparencia electoral.';
+      status.innerText = '¡Denuncia recibida con éxito! Gracias por tu valentía y compromiso.';
     } else {
-      throw new Error('Fallo en el servidor');
+      throw new Error('Error en el servidor');
     }
   } catch (error) {
     console.error('Error:', error);
     status.style.display = 'block';
     status.style.background = '#f8d7da';
     status.style.color = '#721c24';
-    status.innerText = 'Error al enviar. Por favor verifica tu conexión e intenta de nuevo.';
+    status.innerText = 'Hubo un error al enviar. Por favor, verifica tu conexión e inténtalo de nuevo.';
     btn.disabled = false;
     btn.innerText = 'REINTENTAR ENVÍO';
-    btn.style.opacity = '1';
   }
 });
 </script>
-
-<style>
-  #btnEnviar:hover { background: #4a0346 !important; }
-  .post-content label { color: #333; }
-</style>
