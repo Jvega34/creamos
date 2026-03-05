@@ -8,7 +8,7 @@ description: "Canal seguro y 100% anónimo para reportar irregularidades elector
 <div class="post-content is-cacareo" markdown="1">
 
 ### 🛡️ Protege la Democracia con Evidencia Real
-Este portal permite reportar irregularidades de forma **estrictamente anónima**. Ahora puedes adjuntar fotos o videos cortos para respaldar tu denuncia. Los datos se almacenan en la infraestructura privada de **Creamos** en Google Cloud.
+Este portal permite reportar irregularidades de forma **estrictamente anónima**. Si te es posible, puedes adjuntar fotos o videos cortos para respaldar tu denuncia. Los datos se almacenan en la infraestructura privada de **Creamos**.
 
 <div class="denuncia-wrapper" style="background: #f9f9f9; padding: 2rem; border-radius: 8px; border: 1px solid #eee; margin: 2rem 0;">
   
