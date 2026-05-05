@@ -1,0 +1,74 @@
+---
+layout: default
+title: "Síntesis del Plan de Gobierno 2026 - 2030"
+permalink: /sintesis-plan-de-gobierno/
+description: "Síntesis pedagógica del Plan de Gobierno 2026 - 2030. Disponible para lectura en línea y descarga."
+---
+
+<style>
+  .pdf-page-intro {
+      margin-bottom: 1.5rem;
+        }
+          .pdf-actions {
+              display: flex;
+                  flex-wrap: wrap;
+                      gap: 0.75rem;
+                          margin: 1rem 0 1.5rem;
+                            }
+                              .pdf-actions a {
+                                  display: inline-block;
+                                      padding: 0.6rem 1.1rem;
+                                          border-radius: 6px;
+                                              text-decoration: none;
+                                                  font-weight: 700;
+                                                      font-family: 'Inter', sans-serif;
+                                                          border: 2px solid currentColor;
+                                                              transition: transform .15s ease, opacity .15s ease;
+                                                                }
+                                                                  .pdf-actions a:hover { transform: translateY(-1px); opacity: .9; }
+                                                                    .pdf-actions .pdf-download {
+                                                                        background-color: #0a3d62;
+                                                                            color: #ffffff;
+                                                                                border-color: #0a3d62;
+                                                                                  }
+                                                                                    .pdf-actions .pdf-open {
+                                                                                        background-color: transparent;
+                                                                                            color: #0a3d62;
+                                                                                                border-color: #0a3d62;
+                                                                                                  }
+                                                                                                    .pdf-viewer {
+                                                                                                        width: 100%;
+                                                                                                            height: 80vh;
+                                                                                                                min-height: 520px;
+                                                                                                                    border: 1px solid rgba(0,0,0,.15);
+                                                                                                                        border-radius: 6px;
+                                                                                                                            background: #f3f3f3;
+                                                                                                                              }
+                                                                                                                                .pdf-fallback {
+                                                                                                                                    margin-top: 1rem;
+                                                                                                                                        font-size: 0.95rem;
+                                                                                                                                            color: #555;
+                                                                                                                                              }
+                                                                                                                                              </style>
+                                                                                                                                              
+                                                                                                                                              <div class="pdf-page-intro">
+                                                                                                                                                <h1>Síntesis pedagógica del Plan de Gobierno 2026 - 2030</h1>
+                                                                                                                                                  <p>Te invitamos a leer la síntesis pedagógica del Plan de Gobierno. Puedes consultarla directamente en esta página o descargarla en formato PDF para leerla con calma.</p>
+                                                                                                                                                  </div>
+                                                                                                                                                  
+                                                                                                                                                  <div class="pdf-actions">
+                                                                                                                                                    <a class="pdf-download" href="/assets/pdfs/S%C3%ADntesis%20pedag%C3%B3gica%20Plan%20de%20Gobierno.pdf" download>⬇︎ Descargar PDF</a>
+                                                                                                                                                      <a class="pdf-open" href="/assets/pdfs/S%C3%ADntesis%20pedag%C3%B3gica%20Plan%20de%20Gobierno.pdf" target="_blank" rel="noopener">Abrir en una pestaña nueva ↗︎</a>
+                                                                                                                                                      </div>
+                                                                                                                                                      
+                                                                                                                                                      <iframe
+                                                                                                                                                        class="pdf-viewer"
+                                                                                                                                                          src="/assets/pdfs/S%C3%ADntesis%20pedag%C3%B3gica%20Plan%20de%20Gobierno.pdf#view=FitH"
+                                                                                                                                                            title="Síntesis pedagógica del Plan de Gobierno 2026 - 2030"
+                                                                                                                                                              loading="lazy">
+                                                                                                                                                              </iframe>
+                                                                                                                                                              
+                                                                                                                                                              <p class="pdf-fallback">
+                                                                                                                                                                ¿No ves el documento? <a href="/assets/pdfs/S%C3%ADntesis%20pedag%C3%B3gica%20Plan%20de%20Gobierno.pdf" target="_blank" rel="noopener">Ábrelo aquí</a> o <a href="/assets/pdfs/S%C3%ADntesis%20pedag%C3%B3gica%20Plan%20de%20Gobierno.pdf" download>descárgalo directamente</a>.
+                                                                                                                                                                </p>
+                                                                                                                                                                
