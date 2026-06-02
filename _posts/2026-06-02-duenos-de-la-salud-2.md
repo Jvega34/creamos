@@ -5,7 +5,6 @@ date: 2026-06-02
 category: coyuntura
 tags: [Salud, EPS, Reforma, Trabajadores]
 description: "Documento completo: la campaña de miedo de los dueños de las grandes IPS de Bogotá y la crisis estructural del sistema de salud colombiano, con 30 años de historia."
-pdf_url: "https://firebasestorage.googleapis.com/v0/b/creamos-8d28e.firebasestorage.app/o/post%2Fduenos_de_la_salud.pdf?alt=media&token=c5c3cefd-26bf-45b0-aa09-4e314d9d2276"
 ---
 
 ## Resumen Ejecutivo
@@ -14,9 +13,9 @@ Los dueños y directivos de las grandes IPS de Bogotá llevan décadas haciendo 
 <hr class="double-divider">
 
 <div style="background: #f8f4ff; border-left: 4px solid #6b21a8; padding: 1.2rem 1.5rem; border-radius: 4px; margin: 1.5rem 0;">
-  <p style="margin: 0 0 0.8rem 0;"><strong>📄 Documento completo disponible para descarga:</strong></p>
-  <a href="{{ page.pdf_url }}" target="_blank" rel="noopener noreferrer" style="display: inline-block; background: #6b21a8; color: white; padding: 0.6rem 1.2rem; border-radius: 4px; text-decoration: none; font-weight: bold;">
-    ⬇ Descargar PDF — Dueños de la Salud
+  <p style="margin: 0 0 0.8rem 0;"><strong>📄 Este documento está disponible en formato visual:</strong></p>
+  <a href="/duenos-de-la-salud-2/" style="display: inline-block; background: #6b21a8; color: white; padding: 0.6rem 1.2rem; border-radius: 4px; text-decoration: none; font-weight: bold;">
+    Ver documento completo →
   </a>
 </div>
 
