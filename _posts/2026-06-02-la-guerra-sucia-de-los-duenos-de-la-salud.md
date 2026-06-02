@@ -5,7 +5,7 @@ date: 2026-06-02
 category: coyuntura
 tags: [Salud, EPS, Reforma, Trabajadores]
 description: "Carta de profesionales de la salud denunciando la campaña de miedo de los dueños de las grandes IPS de Bogotá y la crisis estructural del sistema de salud colombiano."
-image: assets/img/posts/paz-territorial.png
+image: assets/img/duenos_medicina.png
 ---
 
 ## Resumen Ejecutivo
