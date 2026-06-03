@@ -8,7 +8,6 @@ tags:
   - Trabajadores
   - Elecciones
 description: Un médico comparte reflexiones sobre la segunda vuelta presidencial y las propuestas en salud, invitando a sus colegas a considerar el voto por Iván Cepeda.
-image: assets/img/duenos_medicina.png
 ---
 
 ## Estimado colega:
