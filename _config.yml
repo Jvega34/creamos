@@ -7,6 +7,7 @@ description: >-
   Un espacio de investigación-acción y formación popular.
 email: johan.rvega34@gmail.com
 url: "https://creamoscolombia.org"
+lang: es_CO
 baseurl: ""
 logo: "/assets/img/fondoClaro.png"
 
@@ -32,7 +33,15 @@ collections:
     permalink: /notas/:title/
 
 # 4. VALORES POR DEFECTO
+# `image` es la imagen que usan WhatsApp, Facebook, X, etc. en la previsualización
+# del enlace (Open Graph, via jekyll-seo-tag). Ponerla en JPG 1200x675 y menos de
+# 250 KB en assets/img/social/. Si una entrada quiere mostrar en la página una
+# imagen distinta (p. ej. el cartel vertical original), usar `cover`.
 defaults:
+  - scope:
+      path: ""
+    values:
+      image: /assets/img/social/creamos-default.jpg
   - scope:
       path: ""
       type: "posts"

@@ -5,7 +5,7 @@ date: 2025-12-20
 category: coyuntura
 tags: [Paz Total, Seguridad, Conflicto]
 description: "Análisis técnico sobre la persistencia de la violencia, la expansión de grupos armados y los retos de la política de Paz Total en los territorios."
-image: assets/img/posts/paz-territorial.png
+image: /assets/img/social/paz-territorial.jpg
 ---
 
 ## Resumen Ejecutivo

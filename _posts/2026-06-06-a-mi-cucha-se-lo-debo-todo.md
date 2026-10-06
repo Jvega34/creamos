@@ -8,7 +8,8 @@ tags:
   - Trabajo
   - Educación
 description: Un joven narra su historia de esfuerzo y sacrificio, marcada por el apoyo incondicional de su mamá y la realidad del trabajo doble para salir adelante.
-image: assets/img/posts/a-mi-cucha-se-lo-debo-todo.png
+image: /assets/img/social/a-mi-cucha-se-lo-debo-todo.jpg
+cover: /assets/img/posts/a-mi-cucha-se-lo-debo-todo.png
 ---
 
 ![A Mi Cucha Se Lo Debo Todo]({{ site.baseurl }}/assets/img/posts/a-mi-cucha-se-lo-debo-todo.png)

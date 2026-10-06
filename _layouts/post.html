@@ -23,9 +23,11 @@ layout: default
       }}
     </div>
 
-    {% if page.image %}
-      <img src="{{ page.image | relative_url }}" alt="{{ page.title }}" class="featured-image">
-    {% endif %}
+    {%- comment -%} La imagen por defecto de _config.yml es solo para la previsualización en redes; no se muestra en la página. {%- endcomment -%}
+    {% assign featured = page.cover | default: page.image %}
+    {% if featured %}{% unless featured contains "creamos-default" %}
+      <img src="{{ featured | relative_url }}" alt="{{ page.title }}" class="featured-image">
+    {% endunless %}{% endif %}
   </header>
 
   <hr class="double-divider">

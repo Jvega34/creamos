@@ -5,7 +5,7 @@ date: 2026-02-09
 category: coyuntura
 tags: [Tecnología, Poder, Soberanía]
 description: "Análisis sobre la configuración de un nuevo paradigma de poder a través de la inteligencia artificial y la necesidad de autonomía tecnológica."
-image: assets/img/posts/ia-voto.png
+image: /assets/img/social/ia-voto.jpg
 ---
 
 ## Resumen Ejecutivo

@@ -2,7 +2,7 @@
 layout: post
 title: "Orlando Fals Borda: 100 años de ciencia para el pueblo"
 date: 2026-02-19
-image: assets/img/posts/falsBorda.jpeg
+image: /assets/img/social/fals-borda.jpg
 description: "Homenaje al centenario del sociólogo colombiano que revolucionó el pensamiento crítico con la Investigación-Acción Participativa y el socialismo raizal."
 ---
 

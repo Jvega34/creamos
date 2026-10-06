@@ -2,7 +2,7 @@
 layout: post
 title: "Y CAMILO VOLVIÓ…"
 date: 2026-02-19
-image: assets/img/posts/camiloTorres_Vuelve.jpeg
+image: /assets/img/social/camilo-torres-vuelve.jpg
 description: "Crónica sobre el retorno de los restos de Camilo Torres Restrepo a la Universidad Nacional y la vigencia de un pensamiento que trasciende la fe para instalarse en lo colectivo."
 ---
 

@@ -5,7 +5,6 @@ date: 2026-05-27
 category: coyuntura
 tags: [Coyuntura, Datos, Gobierno, Respuesta]
 description: "Respuesta argumentada y con cifras a la columna de Thierry Ways: desmontando la posverdad y mostrando los avances reales del proyecto de cambio en Colombia."
-image: assets/img/posts/respuesta-thierry.png
 author: "Juan Diego Escobar Mejía"
 ---
 

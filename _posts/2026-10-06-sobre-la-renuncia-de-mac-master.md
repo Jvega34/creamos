@@ -6,7 +6,7 @@ category: coyuntura
 tags: [Coyuntura, ANDI, Gremios, Democracia, Élites]
 description: "La salida de Bruce Mac Master de la ANDI por presión del gobierno de Espriella revela cómo entienden la democracia las élites económicas y políticas: un reacomodo de fichas en el poder corporativo, no una defensa de las instituciones."
 author: "Andrea Lombana"
-image: assets/img/posts/renuncia-mac-master.png
+image: /assets/img/social/renuncia-mac-master.jpg
 ---
 
 <ul class="titulares">
