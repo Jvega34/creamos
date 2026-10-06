@@ -20,7 +20,7 @@ title: Inicio
           <a href="{{ post.url }}" style="text-decoration: none; color: #111;">{{ post.title }}</a>
         </h3>
         <p style="font-size: 1.1rem; color: #444;">
-          {{ post.excerpt | strip_html | truncatewords: 30 }}
+          {% if post.description %}{{ post.description }}{% else %}{{ post.excerpt | strip_html | truncatewords: 30 }}{% endif %}
         </p>
         <a href="{{ post.url }}" style="font-weight: 700; color: #63055d; text-decoration: none; border-bottom: 2px solid #ffcc29;">
           Leer investigación completa →

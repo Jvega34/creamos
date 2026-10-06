@@ -1,18 +1,20 @@
 ---
 layout: post
-title: "Sobre la renuncia de Mac Master"
+title: "Sobre la renuncia de Bruce Mac Master a la presidencia de la ANDI"
 date: 2026-10-06
 category: coyuntura
 tags: [Coyuntura, ANDI, Gremios, Democracia, Élites]
 description: "La salida de Bruce Mac Master de la ANDI por presión del gobierno de Espriella revela cómo entienden la democracia las élites económicas y políticas: un reacomodo de fichas en el poder corporativo, no una defensa de las instituciones."
 author: "Andrea Lombana"
+image: assets/img/posts/renuncia-mac-master.png
 ---
 
-*Por: Andrea Lombana*
-
-<hr class="double-divider">
-
-***“¡Escandaloso! El Presidente de la ANDI renuncia por presiones del Gobierno”***, ***“El sesgo antiempresa del Gobierno Petro rompe con la autonomía de la ANDI”*** ... ***“La dictadura se toma a Colombia: Petro saca al Presidente de la ANDI”*** ... ***“El Castrochavismo gana: La ANDI sin autonomía ante la izquierda”***
+<ul class="titulares">
+  <li>“¡Escandaloso! El Presidente de la ANDI renuncia por presiones del Gobierno”</li>
+  <li>“El sesgo antiempresa del Gobierno Petro rompe con la autonomía de la ANDI”</li>
+  <li>“La dictadura se toma a Colombia: Petro saca al Presidente de la ANDI”</li>
+  <li>“El Castrochavismo gana: La ANDI sin autonomía ante la izquierda”</li>
+</ul>
 
 Así, más o menos, serían los titulares de medios de comunicación si la renuncia de Bruce Mac Master se hubiera dado en el gobierno anterior. Mac Master, quien en 2018, 2022 y 2026 se opuso férrea y públicamente a las aspiraciones presidenciales del proyecto progresista que hoy encarna el Pacto Histórico, sale por la puerta de atrás del gremio que presidió durante 13 años. Lo hace por presión abierta del gobierno de Espriella. Un empresario siempre alineado a la derecha hoy renuncia pues el gobierno le impuso un veto porque no quiso entregar a la fundación de la esposa del presidente los recursos que la ANDI recogió para las zonas afectadas por el terremoto del 10 de agosto. La vanidad y superficialidad de Espriella y su círculo son el mayor riesgo para la democracia.
 

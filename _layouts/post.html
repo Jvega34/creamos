@@ -3,13 +3,10 @@ layout: default
 ---
 <article class="post-container">
   <header class="post-header">
-    {% if page.image %}
-  <img src="{{ page.image | relative_url }}" alt="{{ page.title }}" class="featured-image">
-{% endif %}
     <span class="post-category">{{ page.category | replace: "-", " " | capitalize }}</span>
-    
+
     <h1 class="main-headline">{{ page.title }}</h1>
-    
+
     <div class="post-tags" style="margin: 15px 0;">
       {% for tag in page.tags %}
         <a href="/temas#{{ tag | slugify }}" class="tag-link">#{{ tag }}</a>
@@ -17,13 +14,18 @@ layout: default
     </div>
 
     <div class="post-meta">
-      {{ page.date | date: "%e de %B, %Y" | 
-        replace: "January", "Enero" | replace: "February", "Febrero" | replace: "March", "Marzo" | 
-        replace: "April", "Abril" | replace: "May", "Mayo" | replace: "June", "Junio" | 
-        replace: "July", "Julio" | replace: "August", "Agosto" | replace: "September", "Septiembre" | 
-        replace: "October", "Octubre" | replace: "November", "Noviembre" | replace: "December", "Diciembre" 
+      {% if page.author %}<span class="post-author">Por {{ page.author }}</span>{% endif %}
+      {{ page.date | date: "%e de %B, %Y" |
+        replace: "January", "Enero" | replace: "February", "Febrero" | replace: "March", "Marzo" |
+        replace: "April", "Abril" | replace: "May", "Mayo" | replace: "June", "Junio" |
+        replace: "July", "Julio" | replace: "August", "Agosto" | replace: "September", "Septiembre" |
+        replace: "October", "Octubre" | replace: "November", "Noviembre" | replace: "December", "Diciembre"
       }}
     </div>
+
+    {% if page.image %}
+      <img src="{{ page.image | relative_url }}" alt="{{ page.title }}" class="featured-image">
+    {% endif %}
   </header>
 
   <hr class="double-divider">
